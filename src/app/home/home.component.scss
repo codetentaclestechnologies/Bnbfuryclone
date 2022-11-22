@@ -1,0 +1,94 @@
+.jJAzoG {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0 30px 8px;
+  font-size: 14px;
+  font-family: fontRegular;
+  align-items: flex-end;
+}
+
+.jJAzoG img {
+  width: 120px;
+  max-height: 35px;
+}
+
+input.enter_amt.number-input__input {
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  background: transparent;
+  color: white;
+  box-shadow: none;
+  border: none;
+  padding: 1rem;
+  outline: none !important;
+}
+div .cond-content .row .in {
+  width: 100% !important;
+}
+
+.flex-xs-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-pt3 {
+  padding-top: 2rem;
+}
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+#reddit path {
+  fill: white;
+}
+
+thead, tbody { display: block; }
+
+tbody {
+    height: 250px;       /* Just for the demo          */
+    overflow-y: auto;    /* Trigger vertical scroll    */
+    overflow-x: hidden;  /* Hide the horizontal scroll */
+}
+tr {
+  display: flex;
+}
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767px) {
+  .flex-xs-column {
+    flex-direction: column;
+  }
+  .stats-item {
+    width: 100%;
+    text-align: center;
+  }
+  .cond-main:before,
+  .cond-main:after {
+    height: 100%;
+  }
+  .why-content .refer {
+    justify-content: space-around;
+  }
+  .jJAzoG {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      margin-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+  }
+  .about .daily {
+    margin-top: 7.5rem;
+  }
+  .stats-item:last-child:before {
+    border: none;
+  }
+}

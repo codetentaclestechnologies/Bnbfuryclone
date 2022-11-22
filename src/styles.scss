@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+div .ngx-slider {
+  margin: 55px 0 28px;
+}
+
+.ngx-slider .ngx-slider-bubble {
+  color: #ffffff !important;
+  font-size: 26px !important;
+}
+.table-striped tbody tr:nth-child(odd) > td,
+.table-striped tbody tr:nth-child(odd) > th {
+  background-color: #1c2536; // Choose your own color here
+}
+
+div .mat-dialog-container {
+  padding: 0;
+}
+.walletconnect-modal__mobile__toggle a {
+  color: black;
+  font-size: 18px;
+}

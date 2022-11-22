@@ -1,0 +1,79 @@
+.holder-box-black2:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 4px;
+    background: #edb53f;
+    transition: all .3s ease-in-out;
+}
+
+.v-sheet.v-card:not(.v-sheet--outlined) {
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+      0 1px 5px 0 rgb(0 0 0 / 12%);
+  }
+  
+  .v-dialog .v-sheet.v-card {
+    border-radius: 0;
+  }
+  .v-dialog--scrollable > .v-card,
+  .v-dialog--scrollable > form > .v-card {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .v-sheet.v-card {
+    border-radius: 4px;
+  }
+  .v-application .justify-space-between {
+    justify-content: space-between!important;
+}
+.v-application .d-flex {
+    display: flex!important;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    svg {
+        margin-right: 0.5rem;
+    }
+}
+.title-line-bottom {
+    padding-bottom: 13px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid hsla(0,0%,97.6%,.16);
+    position: relative;
+    justify-content: space-between;
+    color: white;
+    display: flex;
+}
+button.button-close {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+  .holder-box-black2 {
+    width: 100%;
+    max-width: 100%;
+    background-color: #232e40;
+    color: #f9f9f9;
+    padding: 25px 30px 15px;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-color: hsla(0, 0%, 100%, 0.2) #232e40;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+  }
+  .theme--light.v-card {
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  
