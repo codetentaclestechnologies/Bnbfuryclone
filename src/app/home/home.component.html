@@ -1,9 +1,9 @@
 <body class="home">
   <div class="page-wrap">
-    <div class="main-section">
+    <div class="main-section" style="background:rgba(0, 0, 0, 1) url('assets/img/Banner.jpg') no-repeat scroll top center / cover">
       <div class="decor"></div>
       <header class="header">
-        <div class="wrapper">
+        
           <div class="t-panel">
             <a href="#" class="logo">
               <img
@@ -11,6 +11,48 @@
                 alt=""
               />
             </a>
+
+            <nav class="main-nav">
+              <button class="menu-toggle">Menu</button>
+              <div class="menu-wrap">
+                <ul class="menu">
+                  <li>
+                    <a
+                      href="javascript:void(0)"
+                      (click)="
+                        element.scrollIntoView({
+                          behavior: 'smooth',
+                          block: 'center'
+                        })
+                      "
+                      >Deposit</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://bscscan.com/address/0xD147f61f7d97874390e4a2564e6F9866E46263e0"
+                      target="_blank"
+                      style="margin-left: 0.5rem"
+                      >Contract</a
+                    >
+                  </li>
+                  <li>
+                    <a
+              href="https://t.me/bnbeasy"
+              target="_blank"
+              >Telegram</a
+            >
+                  </li>
+                </ul>
+              </div>
+              <!-- <div class="btn-wrap">
+                              <a data-modal="" onclick="connect()" id="btnc" class="" data-src="#stat">
+                                  <span style="font-size: 1.2rem; display: none;" class="mt-2" id="connect">Connect</span>
+                                  <span style="font-size:1.2rem" class="mt-2" id="dashboard">Dashboard</span>
+                              </a>
+  
+                          </div> -->
+            </nav>
             <div class="hstats">
               <div class="profit" *ngIf="isConnected">
                 Your Address -
@@ -42,67 +84,24 @@
                             </li>
                         </ul>
                     </div> -->
-          <nav class="main-nav">
-            <button class="menu-toggle">Menu</button>
-            <div class="menu-wrap">
-              <ul class="menu">
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    (click)="
-                      element.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                      })
-                    "
-                    >Deposit</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://bscscan.com/address/0xD147f61f7d97874390e4a2564e6F9866E46263e0"
-                    target="_blank"
-                    style="margin-left: 0.5rem"
-                    >Contract</a
-                  >
-                </li>
-                <li>
-                  <a
-            href="https://t.me/bnbeasy"
-            target="_blank"
-            >Telegram</a
-          >
-                </li>
-              </ul>
-            </div>
-            <!-- <div class="btn-wrap">
-                            <a data-modal="" onclick="connect()" id="btnc" class="" data-src="#stat">
-                                <span style="font-size: 1.2rem; display: none;" class="mt-2" id="connect">Connect</span>
-                                <span style="font-size:1.2rem" class="mt-2" id="dashboard">Dashboard</span>
-                            </a>
-
-                        </div> -->
-          </nav>
-        </div>
+         
+       
       </header>
-      <div class="wrapper">
-        <div class="main-content">
-          <a href="#" class="logo">
-            <!-- <img src="assets/img/A_letter_logo-removebg-preview3.png" alt=""> -->
-          </a>
-          <h1>BNB Easy yield Smart Contract</h1>
-
-          <p>
-            Stable & Profitable Yield Farming Dapp With Automated Users
-            Insurance?
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="about">
-      <div class="wrapper clearfix">
-        <div class="about-info">
+      <div class="wrapper clearfix" style="display: flex;padding-top:60px;">
+      
+          <div class="main-content">
+            <a href="#" class="logo">
+              <!-- <img src="assets/img/A_letter_logo-removebg-preview3.png" alt=""> -->
+            </a>
+            <h1>BNB Easy yield Smart Contract</h1>
+  
+            <p>
+              Stable & Profitable Yield Farming Dapp With <br> Automated Users
+              Insurance?
+            </p>
+          </div>
+       
+   
           <div class="block">
             <div class="calc-top">
               <div class="calc-input">
@@ -153,43 +152,69 @@
               </div>
             </div>
           </div>
-          <div class="daily">
-            <div class="daily-num js-contract-rate">
-              <h3>
-                5 <br />
-                Levels
-              </h3>
-            </div>
-            <div class="daily-content">
-              <div class="daily-capt">
-                From 8% up to 10% Daily ROI 5 Levels of Referral Rewards
-              </div>
-              <div class="daily-val" data-num="0" style="display: none">0</div>
-            </div>
-          </div>
         </div>
+       </div>
+       
+   
+<div class="daily" style="display:none;">
+  <div class="wrapper-clearfix">
+    <div class="about-info">
+    <div class="daily">
+      <div class="daily-num js-contract-rate">
+        <h3>
+          5 <br />
+          Levels
+        </h3>
+      </div>
+      <div class="daily-content">
+        <div class="daily-capt">
+          From 8% up to 10% Daily ROI 5 Levels of Referral Rewards
+        </div>
+        <div class="daily-val" data-num="0" style="display: none">0</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+    <div class="about">
+      <div class="wrapper clearfix">
+    
         <div class="about-content">
           <div class="about-list">
-            
+            <div class="about-row">
             <div class="about-item">
-              Flexible architecture will be profitable for any investor: just
-              choose your plan and Claim the profits!
+              <img src ="assets\img\fund.png" alt="Investor">
+              <p>Flexible architecture will be profitable for any investor: just
+              choose your plan and Claim the profits!</p>
+           
             </div>
             <div class="about-item">
-              Generosity is balanced by two simple rules: max 6 Claims per day,
-              max 5 BNB at once
+              <img src ="assets\img\book.png" alt="project">
+              <p>Generosity is balanced by two simple rules: max 6 Claims per day,
+              max 5 BNB at once</p>
+            </div>
+          </div>
+        <div class="about-row">
+        
+            <div class="about-item">
+              <img src ="assets\img\deposit.png" alt="Deposit">
+              <p>Earn when people invited by you make deposits. You also benefit
+              from their Referrals!</p>
+
             </div>
             <div class="about-item">
-              Earn when people invited by you make deposits. You also benefit
-              from their Referrals!
+              <img src ="assets\img\question.png" alt="Question">
+              <p>Feel free to ask any question in our group any time, we will be
+              glad to help you!</p>
             </div>
+          </div>
+          <div class="about-row">
             <div class="about-item">
-              Feel free to ask any question in our group any time, we will be
-              glad to help you!
+              <img src ="assets\img\project.png" alt="project">
+              <p>A special standalone contract guards the Project against balance
+                draining and keeps it alive</p>
             </div>
-            <div class="about-item">
-              A special standalone contract guards the Project against balance
-              draining and keeps it alive
             </div>
           </div>
         </div>
@@ -197,30 +222,10 @@
     </div>
     <section class="conditions" id="investment" #element>
       <div class="wrapper">
-        <h2><strong>Stake </strong> BNB</h2>
+        <h2>Stake  BNB</h2>
 
         <div class="cond clearfix">
-          <div class="cond-main">
-            <div class="cond-stat">
-              <strong class="js-contract-rate"
-                >{{ holdBonus | number: "0.2" }}%</strong
-              >
-              Daily ROI
-            </div>
-            <div class="cond-stat">
-              <strong class="js-contract-rate"
-                >{{ totalprofit | number: "0.2" }}%</strong
-              >
-              Total Profit:
-            </div>
-            <div class="cond-stat">
-              <strong class="js-contract-rate"
-                >{{ profit | number: "0.4" }} BNB</strong
-              >
-              In {{ value }} days you will earn:
-            </div>
-          </div>
-
+          
           <div class="cond-content">
             <div class="pref-list">
               <div class="pref-item">
@@ -292,6 +297,28 @@
               </div>
             </div>
           </div>
+
+          <div class="cond-main">
+            <div class="cond-stat">
+              <strong class="js-contract-rate"
+                >{{ holdBonus | number: "0.2" }}%</strong
+              >
+              Daily ROI
+            </div>
+            <div class="cond-stat" style="border-right: 2px dashed #fff;border-left: 2px dashed #fff ;">
+              <strong class="js-contract-rate"
+                >{{ totalprofit | number: "0.2" }}%</strong
+              >
+              Total Profit:
+            </div>
+            <div class="cond-stat">
+              <strong class="js-contract-rate"
+                >{{ profit | number: "0.4" }} BNB</strong
+              >
+              In {{ value }} days you will earn:
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -299,7 +326,9 @@
       <h2><strong>Your </strong> Account</h2>
       <div class="block">
         <div class="stats" style="margin: 0">
-          <div class="stats-row">
+         
+          <div class="stats-row " style="background-color: #0b0f2d;">
+
             <div class="stats-item">
               <div class="stats-label">
                 <span class="">
@@ -341,6 +370,8 @@
               </div>
             </div>
           </div>
+          
+         
           <div class="stats-row">
             <div class="stats-item">
               <div class="stats-label">
@@ -380,6 +411,8 @@
               </div> -->
             </div>
           </div>
+         
+          
           <div class="stats-row">
             <div class="stats-item">
               <div class="stats-label">
@@ -426,6 +459,8 @@
               >
             </div> -->
           </div>
+          
+          
           <div class="stats-row">
             <div class="stats-item">
               <div class="stats-label">
@@ -483,6 +518,8 @@
               </table>
             </div>
           </div>
+          
+
         </div>
       </div>
     </div>
@@ -493,35 +530,35 @@
         <p>Stake atleast once to receive referral rewards!</p>
         <div class="why-columns">
           <div class="column">
-            <div class="why-content">
+            <div class="why-content" style="display:none">
               <div class="box">
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" /> level 1<span
-                    >6% | &nbsp; {{ getUserInfo?.o_refInfo.count[0]
+                  <img src="assets/img/ref3.png" class="mr-2" /> <p>level 1</p><span
+                    >6% {{ getUserInfo?.o_refInfo.count[0]
                     }}<small class="text-white"> Referrals</small></span
                   >
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" />level 2<span
-                    >3% &nbsp; | &nbsp; {{ getUserInfo?.o_refInfo.count[1]
+                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 2</p><span
+                    >3% {{ getUserInfo?.o_refInfo.count[1]
                     }}<small class="text-white"> Referrals</small></span
                   >
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" />level 3<span
-                    >2% &nbsp; | &nbsp; {{ getUserInfo?.o_refInfo.count[2]
+                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 3</p><span
+                    >2%  {{ getUserInfo?.o_refInfo.count[2]
                     }}<small class="text-white"> Referrals</small></span
                   >
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" />level 4<span
-                    >1% &nbsp; | &nbsp; {{ getUserInfo?.o_refInfo.count[3]
+                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 4</p><span
+                    >1%  {{ getUserInfo?.o_refInfo.count[3]
                     }}<small class="text-white"> Referrals</small></span
                   >
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" />level 5<span
-                    >0.5% &nbsp; | &nbsp; {{ getUserInfo?.o_refInfo.count[4]
+                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 5</p><span
+                    >0.5%  {{ getUserInfo?.o_refInfo.count[4]
                     }}<small class="text-white"> Referrals</small></span
                   >
                 </div>
@@ -605,7 +642,7 @@
     <section>
       <div class="wrapper">
         <h2><strong>Latest Deposits</strong></h2>
-        <div class="block">
+        <div class="block" style="width:100% !important">
           <div class="table-responsive">
             <table class="table-striped">
               <thead>
