@@ -1,220 +1,230 @@
 <body class="home">
   <div class="page-wrap">
-    <div class="main-section" style="background:rgba(0, 0, 0, 1) url('assets/img/Banner.jpg') no-repeat scroll top center / cover">
+    <div class="main-section"
+      style="background:#000000 url('assets/img/Banner.jpg') no-repeat scroll top center / cover">
       <div class="decor"></div>
       <header class="header">
-        
-          <div class="t-panel">
-            <a href="#" class="logo">
-              <img
-                src="assets/img/A_letter_logo-removebg-preview3.png"
-                alt=""
-              />
-            </a>
 
-            <nav class="main-nav">
-              <button class="menu-toggle">Menu</button>
-              <div class="menu-wrap">
-                <ul class="menu">
-                  <li>
-                    <a
-                      href="javascript:void(0)"
-                      (click)="
+
+        <!-- ///mobile menu nav bar// -->
+
+        <!---end-->
+        <div class="t-panel">
+          <a href="#" class="logo">
+            <img src="assets/img/A_letter_logo-removebg-preview3.png" alt="" />
+          </a>
+          <!---mobile-->
+          <div class="mobileview">
+            <label for="a" class="mobiletoggle">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </label>
+            <input type="checkbox" id="a" />
+            <ul class="mobilemenu">
+              <li> <a href="javascript:void(0)" (click)="
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        })
+      ">Deposit</a></li>
+              <li> <a href="https://bscscan.com/address/0xD147f61f7d97874390e4a2564e6F9866E46263e0" target="_blank"
+                  style="margin-left: 0.5rem">Contract</a></li>
+
+              <li><a href="https://t.me/bnbeasy" target="_blank">Telegram</a></li>
+
+            </ul>
+          </div>
+          <!---end-->
+
+          <nav class="main-nav">
+
+            <div class="menu-wrap">
+              <ul class="menu">
+                <li>
+                  <a href="javascript:void(0)" (click)="
                         element.scrollIntoView({
                           behavior: 'smooth',
                           block: 'center'
                         })
-                      "
-                      >Deposit</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://bscscan.com/address/0xD147f61f7d97874390e4a2564e6F9866E46263e0"
-                      target="_blank"
-                      style="margin-left: 0.5rem"
-                      >Contract</a
-                    >
-                  </li>
-                  <li>
-                    <a
-              href="https://t.me/bnbeasy"
-              target="_blank"
-              >Telegram</a
-            >
-                  </li>
-                </ul>
-              </div>
-              <!-- <div class="btn-wrap">
+                      ">Deposit</a>
+                </li>
+                <li>
+                  <a href="https://bscscan.com/address/0xD147f61f7d97874390e4a2564e6F9866E46263e0" target="_blank"
+                    style="margin-left: 0.5rem">Contract</a>
+                </li>
+                <li>
+                  <a href="https://t.me/bnbeasy" target="_blank">Telegram</a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div class="btn-wrap">
                               <a data-modal="" onclick="connect()" id="btnc" class="" data-src="#stat">
                                   <span style="font-size: 1.2rem; display: none;" class="mt-2" id="connect">Connect</span>
                                   <span style="font-size:1.2rem" class="mt-2" id="dashboard">Dashboard</span>
                               </a>
   
                           </div> -->
-            </nav>
-            <div class="hstats">
-              <div class="profit" *ngIf="isConnected">
-                Your Address -
-                <div class="next" id="address">
-                  {{ account.substring(0, 4) }}...{{
-                    account.substring(38, 42)
-                  }}
-                  <!-- {{ account }} -->
-                </div>
+          </nav>
+          <div class="hstats">
+            <div class="profit" *ngIf="isConnected">
+              Your Address -
+              <div class="next" id="address">
+                {{ account.substring(0, 4) }}...{{
+                account.substring(38, 42)
+                }}
+                <!-- {{ account }} -->
               </div>
-              <div class="profit" *ngIf="!isConnected">
-                <button class="btn btn-q btn-block h4" (click)="walletConnect()">
-                  connect
-                </button>
-               
-              </div>
-              <div class="profit" *ngIf="isConnected">
-                <button class="btn btn-q btn-block h4" (click)="disconnect()">
-                  Disconnect
-                </button>
-              </div>
-              
             </div>
+            <div class="profit" *ngIf="!isConnected">
+              <button class="btn btn-q btn-block h4" (click)="walletConnect()">
+                connect
+              </button>
+
+            </div>
+            <div class="profit" *ngIf="isConnected">
+              <button class="btn btn-q btn-block h4" (click)="disconnect()">
+                Disconnect
+              </button>
+            </div>
+
           </div>
-          <!-- <div class="lang">
+        </div>
+        <!-- <div class="lang">
                         <span class="lang-title">Select language</span>
                         <ul>
                             <li><a href="#"><span class="lang-icon us"></span></a>
                             </li>
                         </ul>
                     </div> -->
-         
-       
+
+
       </header>
       <div class="wrapper clearfix" style="display: flex;padding-top:60px;">
-      
-          <div class="main-content">
-            <a href="#" class="logo">
-              <!-- <img src="assets/img/A_letter_logo-removebg-preview3.png" alt=""> -->
-            </a>
-            <h1>BNB Easy yield Smart Contract</h1>
-  
-            <p>
-              Stable & Profitable Yield Farming Dapp With <br> Automated Users
-              Insurance?
-            </p>
-          </div>
-       
-   
-          <div class="block">
-            <div class="calc-top">
-              <div class="calc-input">
-                <div class="box">
-                  <h2>Total Staked Volume</h2>
-                  <div class="row">
-                    <h3>
-                      {{ getProjectInfo?.[1]/1e18 | number: "0.4-4" }}
-                      <span>BNB</span><br />
-                      <small>
-                        $
-                        {{ getProjectInfo?.[1]*bnbPriceInUsd/1e18 | number: "0.4-4" }}</small
-                      >
-                    </h3>
-                    <!-- <h3>
+
+        <div class="main-content .d-block">
+          <a href="#" class="logo">
+            <!-- <img src="assets/img/A_letter_logo-removebg-preview3.png" alt=""> -->
+          </a>
+          <h1>BNB Easy yield Smart Contract</h1>
+
+          <p>
+            Stable & Profitable Yield Farming Dapp With <br> Automated Users
+            Insurance?
+          </p>
+        </div>
+
+
+        <div class="block">
+          <div class="calc-top">
+            <div class="calc-input">
+              <div class="box">
+                <h2>Total Staked Volume</h2>
+                <div class="row">
+                  <h3>
+                    {{ getProjectInfo?.[1]/1e18 | number: "0.4-4" }}
+                    <span>BNB</span><br />
+                    <small>
+
+                      {{ getProjectInfo?.[1]*bnbPriceInUsd/1e18 | number: "0.4-4" }}</small>
+                  </h3>
+                  <!-- <h3>
                       {{starting_day}} D : {{hrs_day}} H : {{min_day}} M : {{sec_day}} S
                     </h3> -->
-                  </div>
                 </div>
-                <div class="box">
-                  <h2>Insurance Pool?</h2>
-                  <div class="row">
-                    <h3>
-                      {{ getProjectInfo?.o_ensBalance/ 1e18 | number: "0.4-4" }}
-                      <span>BNB</span><br /><small>
-                        $
-                        {{
-                          (getProjectInfo?.o_ensBalance * bnbPriceInUsd) / 1e18
-                            | number: "0.4-4"
-                        }}
-                      </small>
-                    </h3>
-                  </div>
+              </div>
+              <div class="box">
+                <h2>Insurance Pool?</h2>
+                <div class="row">
+                  <h3>
+                    {{ getProjectInfo?.o_ensBalance/ 1e18 | number: "0.4-4" }}
+                    <span>BNB</span><br /><small>
+
+                      {{
+                      (getProjectInfo?.o_ensBalance * bnbPriceInUsd) / 1e18
+                      | number: "0.4-4"
+                      }}
+                    </small>
+                  </h3>
                 </div>
-                <div class="box">
-                  <h2>Total Claimed Rewards</h2>
-                  <div class="row">
-                    <h3>
-                      {{ getProjectInfo?.[3]/1e18 | number: "0.4-4" }}
-                      <span>BNB</span><br />
-                      <small
-                        >$
-                        {{getProjectInfo?.[3]*bnbPriceInUsd/1e18 | number: "0.4-4"}}</small
-                      >
-                    </h3>
-                  </div>
+              </div>
+              <div class="box">
+                <h2>Total Claimed Rewards</h2>
+                <div class="row">
+                  <h3>
+                    {{ getProjectInfo?.[3]/1e18 | number: "0.4-4" }}
+                    <span>BNB</span><br />
+                    <small>
+                      {{getProjectInfo?.[3]*bnbPriceInUsd/1e18 | number: "0.4-4"}}</small>
+                  </h3>
                 </div>
               </div>
             </div>
           </div>
         </div>
-       </div>
-       
-   
-<div class="daily" style="display:none;">
-  <div class="wrapper-clearfix">
-    <div class="about-info">
-    <div class="daily">
-      <div class="daily-num js-contract-rate">
-        <h3>
-          5 <br />
-          Levels
-        </h3>
-      </div>
-      <div class="daily-content">
-        <div class="daily-capt">
-          From 8% up to 10% Daily ROI 5 Levels of Referral Rewards
-        </div>
-        <div class="daily-val" data-num="0" style="display: none">0</div>
       </div>
     </div>
-  </div>
-</div>
-</div>
+
+
+    <div class="daily-sec">
+      <div class="wrapper-clearfix">
+        <div class="about-info">
+          <div class="daily" STYLE="BACKGROUND-COLOR:#0b0f2d">
+            <div class="daily-num js-contract-rate">
+              <h3>
+                5 <br />
+                Levels
+              </h3>
+            </div>
+            <div class="daily-content">
+              <div class="daily-capt">
+                <h4>From 8% up to 10% Daily ROI 5 Levels of Referral Rewards</h4>
+              </div>
+              <div class="daily-val" data-num="0" style="display: none">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="about">
       <div class="wrapper clearfix">
-    
+
         <div class="about-content">
           <div class="about-list">
             <div class="about-row">
-            <div class="about-item">
-              <img src ="assets\img\fund.png" alt="Investor">
-              <p>Flexible architecture will be profitable for any investor: just
-              choose your plan and Claim the profits!</p>
-           
-            </div>
-            <div class="about-item">
-              <img src ="assets\img\book.png" alt="project">
-              <p>Generosity is balanced by two simple rules: max 6 Claims per day,
-              max 5 BNB at once</p>
-            </div>
-          </div>
-        <div class="about-row">
-        
-            <div class="about-item">
-              <img src ="assets\img\deposit.png" alt="Deposit">
-              <p>Earn when people invited by you make deposits. You also benefit
-              from their Referrals!</p>
+              <div class="about-item">
+                <img src="assets\img\fund.png" alt="Investor">
+                <p>Flexible architecture will be profitable for any investor: just
+                  choose your plan and Claim the profits!</p>
 
+              </div>
+              <div class="about-item">
+                <img src="assets\img\book.png" alt="project">
+                <p>Generosity is balanced by two simple rules: max 6 Claims per day,
+                  max 5 BNB at once</p>
+              </div>
             </div>
-            <div class="about-item">
-              <img src ="assets\img\question.png" alt="Question">
-              <p>Feel free to ask any question in our group any time, we will be
-              glad to help you!</p>
+            <div class="about-row">
+
+              <div class="about-item">
+                <img src="assets\img\deposit.png" alt="Deposit">
+                <p>Earn when people invited by you make deposits. You also benefit
+                  from their Referrals!</p>
+
+              </div>
+              <div class="about-item">
+                <img src="assets\img\question.png" alt="Question">
+                <p>Feel free to ask any question in our group any time, we will be
+                  glad to help you!</p>
+              </div>
             </div>
-          </div>
-          <div class="about-row">
-            <div class="about-item">
-              <img src ="assets\img\project.png" alt="project">
-              <p>A special standalone contract guards the Project against balance
-                draining and keeps it alive</p>
-            </div>
+            <div class="about-row">
+              <div class="about-item">
+                <img src="assets\img\project.png" alt="project">
+                <p>A special standalone contract guards the Project against balance
+                  draining and keeps it alive</p>
+              </div>
             </div>
           </div>
         </div>
@@ -222,10 +232,12 @@
     </div>
     <section class="conditions" id="investment" #element>
       <div class="wrapper">
-        <h2>Stake  BNB</h2>
+        <h2>
+          <strong>Stake BNB</strong>
+        </h2>
 
         <div class="cond clearfix">
-          
+
           <div class="cond-content">
             <div class="pref-list">
               <div class="pref-item">
@@ -236,12 +248,7 @@
                         <span>Deposit period(days):</span>
                       </div>
 
-                      <ngx-slider
-                        (userChange)="changeSlider()"
-                        class="mb-5"
-                        [(value)]="value"
-                        [options]="options"
-                      >
+                      <ngx-slider (userChange)="changeSlider()" class="mb-5" [(value)]="value" [options]="options">
                       </ngx-slider>
                       <form action="#" class="deposit-form">
                         <div class="deposit-form__wrap">
@@ -250,29 +257,16 @@
                             <div class="row">
                               <div class="w-100">
                                 <div class="col in">
-                                  <input
-                                    #amount
-                                    type="number"
-                                    class="enter_amt number-input__input"
-                                    value="0.0"
-                                    (keyup)="setValue($event)"
-                                  />
+                                  <input #amount type="number" class="enter_amt number-input__input" value="0.0"
+                                    (keyup)="setValue($event)" />
                                 </div>
-                                <div
-                                  class="col h5"
-                                  style="color: #fff; margin-top: -12px"
-                                >
+                                <div class="col h5" style="color: #fff; margin-top: -12px">
                                   Minimum: 0.1<span>BNB</span>
                                 </div>
                               </div>
                               <div class="stats-item btn-item">
-                                <a
-                                  (click)="makeNewDeposit(amount.value)"
-                                  href="javascript:void(0)"
-                                  class="btn btn-block h5"
-                                  style="padding: 1.2rem"
-                                  >STAKE</a
-                                >
+                                <a (click)="makeNewDeposit(amount.value)" href="javascript:void(0)"
+                                  class="btn btn-block h5" style="padding: 1.2rem">STAKE</a>
                               </div>
                             </div>
                           </div>
@@ -300,108 +294,98 @@
 
           <div class="cond-main">
             <div class="cond-stat">
-              <strong class="js-contract-rate"
-                >{{ holdBonus | number: "0.2" }}%</strong
-              >
-              Daily ROI
+              <strong class="js-contract-rate">{{ holdBonus | number: "0.2" }}%</strong>
+              <span>Daily ROI</span>
             </div>
             <div class="cond-stat" style="border-right: 2px dashed #fff;border-left: 2px dashed #fff ;">
-              <strong class="js-contract-rate"
-                >{{ totalprofit | number: "0.2" }}%</strong
-              >
-              Total Profit:
+              <strong class="js-contract-rate">{{ totalprofit | number: "0.2" }}%</strong>
+
+              <span>Total Profit:</span>
             </div>
             <div class="cond-stat">
-              <strong class="js-contract-rate"
-                >{{ profit | number: "0.4" }} BNB</strong
-              >
-              In {{ value }} days you will earn:
+              <strong class="js-contract-rate">{{ profit | number: "0.4" }} BNB</strong>
+              <span>In {{ value }} days you will earn:</span>
             </div>
           </div>
 
         </div>
       </div>
     </section>
-    <div class="wrapper wrapper-pt3">
-      <h2><strong>Your </strong> Account</h2>
-      <div class="block">
-        <div class="stats" style="margin: 0">
-         
-          <div class="stats-row " style="background-color: #0b0f2d;">
+    <section class="statsss">
+      <div class="wrapper wrapper-pt3">
+        <h2><strong>Your Account</strong> </h2>
+        <div class="block">
+          <div class="stats" style="margin: 0">
 
-            <div class="stats-item">
-              <div class="stats-label">
-                <span class="">
-                  {{ (userBalance * bnbPriceInUsd) / 1e18 | number: "0.4-4" }}
-                  <span class="bnb">$ </span>
-                </span>
-                <span
-                  >| {{ userBalance / 1e18 | number: "0.4-4" }}
-                  <span class="bnb">BNB</span></span
-                >
-              </div>
-              Wallet Balance
-            </div>
-            <div class="stats-item flex-xs-column">
-              <div>
+            <div class="stats-row " style="background-color: #0b0f2d;">
+
+              <div class="stats-item">
                 <div class="stats-label">
-                  <span class="js-contract-rateNP">
-                    {{
+                  <span class="">
+                    {{ (userBalance * bnbPriceInUsd) / 1e18 | number: "0.4-4" }}
+                    <span class="bnb"> </span>
+                  </span>
+                  <span>{{ userBalance / 1e18 | number: "0.4-4" }}
+                    <span class="bnb">BNB</span></span>
+                </div>
+                <span>Wallet Balance</span>
+
+
+              </div>
+
+              <div class="stats-item flex-xs-column">
+                <div>
+                  <div class="stats-label">
+                    <span class="js-contract-rateNP">
+                      {{
                       (this.getUserInfo?.o_userInfo.claimable * bnbPriceInUsd) /
-                        1e18 | number: "0.4-4"
-                    }}</span
-                  >
-                  <span class="bnb">$&nbsp;</span> |
-                  {{
-                    this.getUserInfo?.o_userInfo.claimable / 1e18
-                      | number: "0.4-4"
-                  }}
-                  <span class="bnb">BNB</span>
-                </div>
-                BNB To Claim
-              </div>
-              <div>
-                <a
-                  (click)="withdrawAmount()"
-                  href="javascript:void(0)"
-                  class="btn btn-2 btn-block h5"
-                  >Claim</a
-                >
-              </div>
-            </div>
-          </div>
-          
-         
-          <div class="stats-row">
-            <div class="stats-item">
-              <div class="stats-label">
-                <span class="js-contract-rateNP">{{
-                  getUserInfo?.o_planInfo.mActive
-                }}</span>
-                <span class="cur"> Plan</span>
-              </div>
-              Active Plans
-            </div>
-            <div class="stats-item flex-xs-column">
-              <div>
-                <div class="stats-label">
-                  <span class="js-contract-rateNP">
+                      1e18 | number: "0.4-4"
+                      }}</span>
+                    <span class="bnb">&nbsp;</span> |
                     {{
-                      (this.getUserInfo?.o_userInfo.totalClaimed *
-                        bnbPriceInUsd) /
-                        1e18 | number: "0.4-4"
-                    }}</span
-                  >
-                  <span class="bnb">$</span> |
-                  {{
-                    this.getUserInfo?.o_userInfo.totalClaimed / 1e18
-                      | number: "0.4-4"
-                  }}
-                  <span class="bnb">BNB</span>
+                    this.getUserInfo?.o_userInfo.claimable / 1e18
+                    | number: "0.4-4"
+                    }}
+                    <span class="bnb">BNB</span>
+                  </div>
+                  BNB To Claim
                 </div>
-                Total Rewards
+                <div>
+                  <a (click)="withdrawAmount()" href="javascript:void(0)" class="btn btn-2 btn-block h5">Claim</a>
+                </div>
               </div>
-              <!-- <div>
+            </div>
+
+
+            <div class="stats-row">
+              <div class="stats-item">
+                <div class="stats-label">
+                  <span class="js-contract-rateNP">{{
+                    getUserInfo?.o_planInfo.mActive
+                    }}</span>
+                  <span class="cur"> Plan</span>
+                </div>
+                <span>Active Plans</span>
+              </div>
+              <div class="stats-item flex-xs-column">
+                <div>
+                  <div class="stats-label">
+                    <span class="js-contract-rateNP">
+                      {{
+                      (this.getUserInfo?.o_userInfo.totalClaimed *
+                      bnbPriceInUsd) /
+                      1e18 | number: "0.4-4"
+                      }}</span>
+                    <span class="bnb"></span> |
+                    {{
+                    this.getUserInfo?.o_userInfo.totalClaimed / 1e18
+                    | number: "0.4-4"
+                    }}
+                    <span class="bnb">BNB</span>
+                  </div>
+                  Total Rewards
+                </div>
+                <!-- <div>
                 <a
                   (click)="withdrawAmount()"
                   href="javascript:void(0)"
@@ -409,38 +393,39 @@
                   >Claim</a
                 >
               </div> -->
-            </div>
-          </div>
-         
-          
-          <div class="stats-row">
-            <div class="stats-item">
-              <div class="stats-label">
-                <span class="js-contract-rateNP">{{
-                  getUserInfo?.o_planInfo.rActive
-                }}</span>
-                <span class="cur"> Plan</span>
               </div>
-              Reinvest Active plans
             </div>
-            <div class="stats-item flex-xs-column">
-              <div>
+
+
+            <div class="stats-row">
+              <div class="stats-item">
                 <div class="stats-label">
                   <span class="js-contract-rateNP">{{
-                    (this.getUserInfo?.o_userInfo.totalInvested *
+                    getUserInfo?.o_planInfo.rActive
+                    }}</span>
+                  <span class="cur"> Plan</span>
+                </div>
+                <span> Reinvest Active plans</span>
+
+              </div>
+              <div class="stats-item flex-xs-column">
+                <div>
+                  <div class="stats-label">
+                    <span class="js-contract-rateNP">{{
+                      (this.getUserInfo?.o_userInfo.totalInvested *
                       bnbPriceInUsd) /
                       1e18 | number: "0.4-4"
-                  }}</span>
-                  <span class="bnb">$</span> |
-                  {{
+                      }}</span>
+                    <span class="bnb"></span> |
+                    {{
                     this.getUserInfo?.o_userInfo.totalInvested / 1e18
-                      | number: "0.4-4"
-                  }}
-                  <span class="bnb">BNB</span>
+                    | number: "0.4-4"
+                    }}
+                    <span class="bnb">BNB</span>
+                  </div>
+                  TOTAL STAKED
                 </div>
-                TOTAL STAKED
-              </div>
-              <!-- <div>
+                <!-- <div>
                 <a
                   (click)="history()"
                   href="javascript:void(0)"
@@ -448,8 +433,8 @@
                   >History</a
                 >
               </div> -->
-            </div>
-            <!-- <div class="stats-item btn-item">
+              </div>
+              <!-- <div class="stats-item btn-item">
               <a
                 data-modal=""
                 data-src="#stat"
@@ -458,109 +443,97 @@
                 >Get Started Now</a
               >
             </div> -->
-          </div>
-          
-          
-          <div class="stats-row">
-            <div class="stats-item">
-              <div class="stats-label">
-                <span class="js-contract-rateNP">{{
-                  getUserInfo?.o_userInfo.totalClaimed / 1e18 | number: "0.4-4"
-                }}</span>
+            </div>
+
+
+            <div class="stats-row">
+              <div class="stats-item">
+                <div class="stats-label">
+                  <span class="js-contract-rateNP">{{
+                    getUserInfo?.o_userInfo.totalClaimed / 1e18 | number: "0.4-4"
+                    }}</span>
+                </div>
+                <span>Total Withdrawn</span>
               </div>
-              Total Withdrawn
+              <div class="stats-item">
+                <a (click)="history()" href="javascript:void(0)" class="btn btn-2 btn-block h5">History</a>
+              </div>
             </div>
-            <div class="stats-item">
-              <a
-                (click)="history()"
-                href="javascript:void(0)"
-                class="btn btn-2 btn-block h5"
-                >History</a
-              >
-            </div>
-          </div>
 
-          <div class="stats-row">
-            <div class="w-100 table-responsive" *ngIf="depositHistory">
-              <table class="table-striped">
-                <thead>
-                  <tr>
-                    <th>Start Date</th>
-                    <th>End Date</th>
-                    <th>Days</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr
-                    *ngFor="let getUserDepositHistory of o_deposits; index as i"
-                  >
-                    <td>
-                      {{
+            <div class="stats-row">
+              <div class="w-100 table-responsive" *ngIf="depositHistory">
+                <table class="table-striped">
+                  <thead>
+                    <tr>
+                      <th>Start Date</th>
+                      <th>End Date</th>
+                      <th>Days</th>
+                      <th>Amount</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let getUserDepositHistory of o_deposits; index as i">
+                      <td>
+                        {{
                         getUserDepositHistory.timeStart * 1000
-                          | date: "yyyy-MM-dd H:m:s"
-                      }}
-                    </td>
-                    <td>
-                      {{
+                        | date: "yyyy-MM-dd H:m:s"
+                        }}
+                      </td>
+                      <td>
+                        {{
                         getUserDepositHistory.timeEnd * 1000
-                          | date: "yyyy-MM-dd H:m:s"
-                      }}
-                    </td>
-                    <td>{{ getUserDepositHistory.planIdx * 1 + 6 }}</td>
-                    <td>
-                      {{
+                        | date: "yyyy-MM-dd H:m:s"
+                        }}
+                      </td>
+                      <td>{{ getUserDepositHistory.planIdx * 1 + 6 }}</td>
+                      <td>
+                        {{
                         getUserDepositHistory.amount / 1e18 | number: "0.4-4"
-                      }}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        }}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-          
 
+
+          </div>
         </div>
       </div>
-    </div>
-
+    </section>
     <section class="why" id="about">
       <div class="wrapper">
         <h2><strong>Referral Program</strong></h2>
-        <p>Stake atleast once to receive referral rewards!</p>
+        <p style="text-align:center;">Stake atleast once to receive referral rewards!</p>
         <div class="why-columns">
           <div class="column">
-            <div class="why-content" style="display:none">
+            <div class="why-content">
               <div class="box">
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" /> <p>level 1</p><span
-                    >6% {{ getUserInfo?.o_refInfo.count[0]
-                    }}<small class="text-white"> Referrals</small></span
-                  >
+                  <img src="assets/img/ref3.png" class="mr-2" />
+                  <h2>level 1</h2><span>6% {{ getUserInfo?.o_refInfo.count[0]
+                    }}<small class="text-white"> Referrals</small></span>
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 2</p><span
-                    >3% {{ getUserInfo?.o_refInfo.count[1]
-                    }}<small class="text-white"> Referrals</small></span
-                  >
+                  <img src="assets/img/ref3.png" class="mr-2" />
+                  <h2>level 2</h2><span>3% {{ getUserInfo?.o_refInfo.count[1]
+                    }}<small class="text-white"> Referrals</small></span>
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 3</p><span
-                    >2%  {{ getUserInfo?.o_refInfo.count[2]
-                    }}<small class="text-white"> Referrals</small></span
-                  >
+                  <img src="assets/img/ref3.png" class="mr-2" />
+                  <h2>level 3</h2><span>2% {{ getUserInfo?.o_refInfo.count[2]
+                    }}<small class="text-white"> Referrals</small></span>
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 4</p><span
-                    >1%  {{ getUserInfo?.o_refInfo.count[3]
-                    }}<small class="text-white"> Referrals</small></span
-                  >
+                  <img src="assets/img/ref3.png" class="mr-2" />
+                  <h2>level 4</h2><span>1% {{ getUserInfo?.o_refInfo.count[3]
+                    }}<small class="text-white"> Referrals</small></span>
                 </div>
                 <div class="refer">
-                  <img src="assets/img/ref3.png" class="mr-2" /><p>level 5</p><span
-                    >0.5%  {{ getUserInfo?.o_refInfo.count[4]
-                    }}<small class="text-white"> Referrals</small></span
-                  >
+                  <img src="assets/img/ref3.png" class="mr-2" />
+                  <h2>level 5</h2><span>0.5% {{ getUserInfo?.o_refInfo.count[4]
+                    }}<small class="text-white"> Referrals</small></span>
                 </div>
               </div>
             </div>
@@ -569,22 +542,18 @@
             <div class="block">
               <div class="cond-content stats" style="margin: 0">
                 <div class="stats-row">
-                  <div
-                    class="stats-item flex-xs-column"
-                    style="padding-left: 0"
-                  >
+                  <div class="stats-item flex-xs-column" style="padding-left: 0">
                     <div>
                       <div class="stats-label">
                         <span class="js-contract-rateNP">
                           {{
-                            (getUserInfo?.o_refInfo.totalEarned *
-                              bnbPriceInUsd) /
-                              1e18 | number: "0.4-4"
-                          }}</span
-                        ><span class="cur">$</span> |
+                          (getUserInfo?.o_refInfo.totalEarned *
+                          bnbPriceInUsd) /
+                          1e18 | number: "0.4-4"
+                          }}</span><span class="cur"></span> |
                         {{
-                          getUserInfo?.o_refInfo.totalEarned / 1e18
-                            | number: "0.4-4"
+                        getUserInfo?.o_refInfo.totalEarned / 1e18
+                        | number: "0.4-4"
                         }}
                         <span class="bnb">BNB</span>
                       </div>
@@ -592,19 +561,11 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="row"
-                  style="background: transparent; border: none; padding-top: 0"
-                >
+                <div class="row" style="background: transparent; border: none; padding-top: 0">
                   <div class="w-100">
                     <div class="col in">
-                      <input
-                        type="text"
-                        #reflink
-                        value="{{ base_url }}/ref/{{ account }}"
-                        class="enter_amt number-input__input"
-                        readonly
-                      />
+                      <input type="text" #reflink value="{{ base_url }}/ref/{{ account }}"
+                        class="enter_amt number-input__input" readonly />
                     </div>
                     <div class="col h5" style="color: #fff; margin-top: -12px">
                       Note: reflink will not function until you make your first
@@ -612,13 +573,8 @@
                     </div>
                   </div>
                   <div class="stats-item btn-item">
-                    <a
-                      href="javascript:void(0)"
-                      (click)="copyInputMessage(reflink)"
-                      class="btn btn-block h5"
-                      style="padding: 1.2rem"
-                      >Copy</a
-                    >
+                    <a href="javascript:void(0)" (click)="copyInputMessage(reflink)" class="btn btn-block h5"
+                      style="padding: 1.2rem">Copy</a>
                   </div>
                 </div>
               </div>
@@ -639,13 +595,13 @@
       </div>
     </section>
 
-    <section>
+    <section class="despositss">
       <div class="wrapper">
         <h2><strong>Latest Deposits</strong></h2>
         <div class="block" style="width:100% !important">
           <div class="table-responsive">
             <table class="table-striped">
-              <thead>
+              <thead class="thead-dark">
                 <tr>
                   <th>Invested</th>
                   <th>Days</th>
@@ -667,21 +623,15 @@
   </div>
 
   <footer class="footer" id="contacts">
-   
+
     <div class="footer-bottom">
       <div class="wrapper">
         <div class="fb-content">
           <span class="fb-title">Reserve Links</span>
           <div>
-          <!-- <a href="javascript:void(0)" class="btn">{{ base_url }}</a> -->
-          <a
-            href="https://t.me/bnbeasy"
-            target="_blank"
-            class="btn ml-3"
-            style="margin-left: 0.5rem"
-            >Telegram</a
-          >
-        </div>
+            <!-- <a href="javascript:void(0)" class="btn">{{ base_url }}</a> -->
+            <a href="https://t.me/bnbeasy" target="_blank" class="btn ml-3" style="margin-left: 0.5rem">Telegram</a>
+          </div>
         </div>
       </div>
     </div>
