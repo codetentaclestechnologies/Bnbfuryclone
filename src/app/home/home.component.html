@@ -11,7 +11,7 @@
         <!---end-->
         <div class="t-panel">
           <a href="#" class="logo">
-            <img src="assets/img/A_letter_logo-removebg-preview3.png" alt="" />
+            <img src="assets\img\logo.png" alt="" />
           </a>
           <!---mobile-->
           <div class="mobileview">
@@ -31,7 +31,7 @@
               <li> <a href="https://bscscan.com/address/0xD147f61f7d97874390e4a2564e6F9866E46263e0" target="_blank"
                   style="margin-left: 0.5rem">Contract</a></li>
 
-              <li><a href="https://t.me/bnbeasy" target="_blank">Telegram</a></li>
+              <li><a href="#" target="_blank">Telegram</a></li>
 
             </ul>
           </div>
@@ -54,7 +54,7 @@
                     style="margin-left: 0.5rem">Contract</a>
                 </li>
                 <li>
-                  <a href="https://t.me/bnbeasy" target="_blank">Telegram</a>
+                  <a href="#" target="_blank">Telegram</a>
                 </li>
               </ul>
             </div>
@@ -106,7 +106,7 @@
           <a href="#" class="logo">
             <!-- <img src="assets/img/A_letter_logo-removebg-preview3.png" alt=""> -->
           </a>
-          <h1>BNB Easy yield Smart Contract</h1>
+          <h1>Matic Bank Easy yield Smart Contract</h1>
 
           <p>
             Stable & Profitable Yield Farming Dapp With <br> Automated Users
@@ -123,7 +123,7 @@
                 <div class="row">
                   <h3>
                     {{ getProjectInfo?.[1]/1e18 | number: "0.4-4" }}
-                    <span>BNB</span><br />
+                    <span>Matic Bank</span><br />
                     <small>
 
                       {{ getProjectInfo?.[1]*bnbPriceInUsd/1e18 | number: "0.4-4" }}</small>
@@ -138,7 +138,7 @@
                 <div class="row">
                   <h3>
                     {{ getProjectInfo?.o_ensBalance/ 1e18 | number: "0.4-4" }}
-                    <span>BNB</span><br /><small>
+                    <span>Matic Bank</span><br /><small>
 
                       {{
                       (getProjectInfo?.o_ensBalance * bnbPriceInUsd) / 1e18
@@ -153,7 +153,7 @@
                 <div class="row">
                   <h3>
                     {{ getProjectInfo?.[3]/1e18 | number: "0.4-4" }}
-                    <span>BNB</span><br />
+                    <span>Matic Bank</span><br />
                     <small>
                       {{getProjectInfo?.[3]*bnbPriceInUsd/1e18 | number: "0.4-4"}}</small>
                   </h3>
@@ -202,7 +202,7 @@
               <div class="about-item">
                 <img src="assets\img\book.png" alt="project">
                 <p>Generosity is balanced by two simple rules: max 6 Claims per day,
-                  max 5 BNB at once</p>
+                  max 5 Matic Bank at once</p>
               </div>
             </div>
             <div class="about-row">
@@ -233,7 +233,7 @@
     <section class="conditions" id="investment" #element>
       <div class="wrapper">
         <h2>
-          <strong>Stake BNB</strong>
+          <strong>Stake Matic Bank</strong>
         </h2>
 
         <div class="cond clearfix">
@@ -261,7 +261,7 @@
                                     (keyup)="setValue($event)" />
                                 </div>
                                 <div class="col h5" style="color: #fff; margin-top: -12px">
-                                  Minimum: 0.1<span>BNB</span>
+                                  Minimum: 0.1<span>Matic Bank</span>
                                 </div>
                               </div>
                               <div class="stats-item btn-item">
@@ -297,13 +297,13 @@
               <strong class="js-contract-rate">{{ holdBonus | number: "0.2" }}%</strong>
               <span>Daily ROI</span>
             </div>
-            <div class="cond-stat" style="border-right: 2px dashed #fff;border-left: 2px dashed #fff ;">
+            <div class="cond-stat" style="border-right: 2px dashed #0e6af8;border-left: 2px dashed #0e6af8;">
               <strong class="js-contract-rate">{{ totalprofit | number: "0.2" }}%</strong>
 
               <span>Total Profit:</span>
             </div>
             <div class="cond-stat">
-              <strong class="js-contract-rate">{{ profit | number: "0.4" }} BNB</strong>
+              <strong class="js-contract-rate">{{ profit | number: "0.4" }} Matic Bank</strong>
               <span>In {{ value }} days you will earn:</span>
             </div>
           </div>
@@ -323,10 +323,10 @@
                 <div class="stats-label">
                   <span class="">
                     {{ (userBalance * bnbPriceInUsd) / 1e18 | number: "0.4-4" }}
-                    <span class="bnb"> </span>
+                    <!-- <span class="bnb"> </span> -->
                   </span>
                   <span>{{ userBalance / 1e18 | number: "0.4-4" }}
-                    <span class="bnb">BNB</span></span>
+                    <span class="bnb">Matic Bank</span></span>
                 </div>
                 <span>Wallet Balance</span>
 
@@ -346,9 +346,9 @@
                     this.getUserInfo?.o_userInfo.claimable / 1e18
                     | number: "0.4-4"
                     }}
-                    <span class="bnb">BNB</span>
+                    <span class="bnb">Matic Bank</span>
                   </div>
-                  BNB To Claim
+                  Matic Bank To Claim
                 </div>
                 <div>
                   <a (click)="withdrawAmount()" href="javascript:void(0)" class="btn btn-2 btn-block h5">Claim</a>
@@ -381,7 +381,7 @@
                     this.getUserInfo?.o_userInfo.totalClaimed / 1e18
                     | number: "0.4-4"
                     }}
-                    <span class="bnb">BNB</span>
+                    <span class="bnb">Matic Bank</span>
                   </div>
                   Total Rewards
                 </div>
@@ -421,7 +421,7 @@
                     this.getUserInfo?.o_userInfo.totalInvested / 1e18
                     | number: "0.4-4"
                     }}
-                    <span class="bnb">BNB</span>
+                    <span class="bnb">Matic Bank</span>
                   </div>
                   TOTAL STAKED
                 </div>
@@ -555,7 +555,7 @@
                         getUserInfo?.o_refInfo.totalEarned / 1e18
                         | number: "0.4-4"
                         }}
-                        <span class="bnb">BNB</span>
+                        <span class="bnb">Matic Bank</span>
                       </div>
                       Total Rewards
                     </div>
@@ -627,10 +627,17 @@
     <div class="footer-bottom">
       <div class="wrapper">
         <div class="fb-content">
-          <span class="fb-title">Reserve Links</span>
-          <div>
+          <!-- <span class="fb-title">Reserve Links</span> -->
+          <div style="MARGIN:0 AUTO"> 
             <!-- <a href="javascript:void(0)" class="btn">{{ base_url }}</a> -->
-            <a href="https://t.me/bnbeasy" target="_blank" class="btn ml-3" style="margin-left: 0.5rem">Telegram</a>
+            <!-- <a href="#" target="_blank" class="btn ml-3" style="margin-left: 0.5rem"></a> -->
+            <ul class="sociallink">
+              <li> <a href="#" target="_blank" ><img src="assets\img\facebook.svg"></a></li>
+              <li><a href="#" target="_blank" ><img src="assets\img\instagram.svg"></a></li>
+              <li><a href="#" target="_blank" ><img src="assets\img\linkedin.svg"></a></li>
+              <li><a href="#" target="_blank" ><img src="assets\img\telegram.svg"></a></li>
+              <li><a href="#" target="_blank" ><img src="assets\img\youtube.svg"></a></li>
+            </ul>
           </div>
         </div>
       </div>
