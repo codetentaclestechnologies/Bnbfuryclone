@@ -1980,7 +1980,12 @@ h6,
 
 .stats .btn {
     /* background: #f0ba4a; */
+    cursor: pointer;
     background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+    -webkit-appearance: none;
+    outline: none !important;
+    position: relative;
+   position: relative;
 }
 
 .company {
@@ -2530,11 +2535,11 @@ code[class*="language-"]::selection {
 .cond-main:before {
     /* background: -webkit-linear-gradient(240deg, #f2c458 0%, #e3a411 100%);
     background: linear-gradient(210deg, #f2c458 0%, #e3a411 100%); */
-    background-color: #fff;
+    background-color: #323030;
 }
 
 .cond-stat {
-    color: #0e6af8;
+    color: #fff;
     position: relative;
     padding: 25px 15px 25px 15px;
     font-size: 20px;
@@ -6535,8 +6540,8 @@ td {
     .cond-stat:nth-child(2) {
         border-left: none !important;
         border-right: none !important;
-        border-top: 2PX dashed #0e6af8;
-        border-bottom: 2PX dashed #0e6af8;
+        border-top: 2PX dashed #fff;
+        border-bottom: 2PX dashed #fff;
     }
 
     .daily-sec {
