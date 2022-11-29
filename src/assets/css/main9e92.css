@@ -137,7 +137,7 @@ a {
     transition: color 0.24s, background-color 0.24s, border-color 0.24s, -webkit-transform 0.24s;
     transition: color 0.24s, background-color 0.24s, border-color 0.24s, transform 0.24s;
     transition: color 0.24s, background-color 0.24s, border-color 0.24s, transform 0.24s, -webkit-transform 0.24s;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
 }
 
 a:hover,
@@ -1248,7 +1248,7 @@ h6,
     padding: 9px 20px;
     border-radius: 10px;
     /* background: #0b0f2d; */
-    margin-left: 0.5rem;
+    margin:0 0.5rem;
 }
 
 .menu li>a.contest-btn,
@@ -1484,9 +1484,9 @@ h6,
     margin-bottom: 10px;
 }
 
-.about {
+/* .about {
     padding: 40px 0 85px;
-}
+} */
 
 .about-info {
     /* float: right;
@@ -1951,7 +1951,7 @@ h6,
 
 .stats-item {
     width: 50%;
-    padding: 15px 38px 15px 44px;
+    padding: 20px 38px 20px 38px;
     position: relative;
     font-size: 19px;
 }
@@ -2498,8 +2498,7 @@ code[class*="language-"]::selection {
     color: #707070;
     font-size: 16px;
     font-weight: 400;
-    margin-bottom: 83px;
-    display: flex;
+   display: flex;
     flex-direction: row;
 
 }
@@ -6536,6 +6535,9 @@ td {
     .main-content .d-block {
         margin-bottom: 20px;
     }
+    a{
+        color: #fff !important;
+    }
 
     .cond-stat:nth-child(2) {
         border-left: none !important;
@@ -6617,16 +6619,17 @@ td {
     .profit {
         display: none;
     }
+   
 
     .bar1,
     .bar2,
     .bar3 {
         width: 20px;
         height: 5px;
-        background-color: #fff;
+        background-color: #000;
         margin: 6px 0;
         transition: 0.4s;
-        border: 1px solid #fff;
+        border: 1px solid #000;
     }
 
     .profit {
@@ -6675,7 +6678,8 @@ ul.mobilemenu {
 ul.mobilemenu {
     background-color: #0b0f2d;
     position: absolute;
-    top: 90px;
+    top: 72px;
+
     width: 100%;
 
 
@@ -6717,4 +6721,20 @@ a{
 }
 .footer-bottom .wrapper{
     padding:0
+}
+.btn.btn-block:active, .btn.btn-block:hover {
+    color: #fff;
+    box-shadow: 0 15px 35px -16px rgba(0, 0, 0, 0.9);
+    -webkit-transform: translateY(-1px) translateZ(0);
+    transform: translateY(-1px) translateZ(0);
+}
+.why .wrapper h2{
+    margin-bottom: 20px;
+}
+.why-columns{
+    margin-top:50px;
+}
+.wrapper{
+    margin-top:5%;
+    margin-bottom: 5%;
 }

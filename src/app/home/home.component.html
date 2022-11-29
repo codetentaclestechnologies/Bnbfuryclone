@@ -29,7 +29,7 @@
         })
       ">Deposit</a></li>
               <li> <a href="https://bscscan.com/address/0xD147f61f7d97874390e4a2564e6F9866E46263e0" target="_blank"
-                  style="margin-left: 0.5rem">Contract</a></li>
+                >Contract</a></li>
 
               <li><a href="#" target="_blank">Telegram</a></li>
 
@@ -78,7 +78,7 @@
             </div>
             <div class="profit" *ngIf="!isConnected">
               <button class="btn btn-q btn-block h4" (click)="walletConnect()">
-                connect
+                Connect
               </button>
 
             </div>
@@ -303,7 +303,7 @@
               <span>Total Profit:</span>
             </div>
             <div class="cond-stat">
-              <strong class="js-contract-rate">{{ profit | number: "0.4" }} Matic Bank</strong>
+              <strong class="js-contract-rate">{{ profit | number: "0.4" }}<br/> Matic Bank</strong>
               <span>In {{ value }} days you will earn:</span>
             </div>
           </div>
@@ -381,6 +381,7 @@
                     this.getUserInfo?.o_userInfo.totalClaimed / 1e18
                     | number: "0.4-4"
                     }}
+                    <br/>
                     <span class="bnb">Matic Bank</span>
                   </div>
                   Total Rewards
@@ -421,9 +422,10 @@
                     this.getUserInfo?.o_userInfo.totalInvested / 1e18
                     | number: "0.4-4"
                     }}
+                    <br/>
                     <span class="bnb">Matic Bank</span>
                   </div>
-                  TOTAL STAKED
+                  Total Staked
                 </div>
                 <!-- <div>
                 <a
@@ -456,7 +458,7 @@
                 <span>Total Withdrawn</span>
               </div>
               <div class="stats-item">
-                <a (click)="history()" href="javascript:void(0)" class="btn btn-2 btn-block h5">History</a>
+                <a (click)="history()" href="javascript:void(0)" class="btn  btn-block h5">History</a>
               </div>
             </div>
 
@@ -567,8 +569,8 @@
                       <input type="text" #reflink value="{{ base_url }}/ref/{{ account }}"
                         class="enter_amt number-input__input" readonly />
                     </div>
-                    <div class="col h5" style="color: #fff; margin-top: -12px">
-                      Note: reflink will not function until you make your first
+                    <div class="col" style="color: #d3d3d3; margin-top: -12px;margin-left:20px;">
+                      Note: Reflink will not function until you make your first
                       investment
                     </div>
                   </div>
