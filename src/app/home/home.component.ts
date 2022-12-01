@@ -253,11 +253,8 @@ export class HomeComponent implements OnInit {
     })
   }
   
-  walletConnect(): void {
-    const dialogRef = this.dialog.open(WalletconnectComponent, {
-      width: 'auto',
-      panelClass: 'custom-modalbox'
-    });
+  async walletConnect(): Promise<void> {
+    await this.cs.connectContract();
   }
 
   disconnect()

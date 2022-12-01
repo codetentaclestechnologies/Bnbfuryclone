@@ -5,6 +5,7 @@ import Web3 from 'web3';
 import { Observable, BehaviorSubject } from 'rxjs';
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import { environment } from 'src/environments/environment';
+import { ToastrService } from 'ngx-toastr';
 
 
 function _window(): any {
@@ -50,7 +51,7 @@ export class GlobalService {
   public walletDetails$: BehaviorSubject<string> = new BehaviorSubject<string>("");
   commonContract: any;
 
-  constructor() {
+  constructor(private toaster:ToastrService) {
 
   }
 
@@ -149,9 +150,11 @@ catch(e)
     this._account = await this.signer.getAddress();
     var network = await this.provider.getNetwork();
     localStorage.setItem('address', this._account);
-    // alert(this._account);
+    localStorage.setItem('chainId',network.chainId);
     if (network.chainId == environment.chainId) {
         this.stakingContract = new ethers.Contract(this.stakingBNBAddress, stakingBNBAbi, this.signer);
+    }else{
+      this.toaster.warning('You are on wrong network...')
     }
     this.setWalletObs(this._account);
   }
