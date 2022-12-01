@@ -4,6 +4,7 @@ import { ethers } from "ethers";
 import Web3 from 'web3';
 import { Observable, BehaviorSubject } from 'rxjs';
 import WalletConnectProvider from "@walletconnect/web3-provider";
+import { environment } from 'src/environments/environment';
 
 
 function _window(): any {
@@ -35,7 +36,8 @@ provider.networkId = 56;
 })
 export class GlobalService {
 
-  public stakingBNBAddress: string = "0xD147f61f7d97874390e4a2564e6F9866E46263e0";
+  // public stakingBNBAddress: string = "0xD147f61f7d97874390e4a2564e6F9866E46263e0";
+  public stakingBNBAddress: string = "0x33Fd9153497A967609F7A7C077fcb69ec20Bb730";
   public owner_address: string = "0x4Bb211C8a971Cc779a2B3Eb9A722aAc3b5E3b8e6";
   public _web3: any;
   stakingContract: any;
@@ -148,7 +150,7 @@ catch(e)
     var network = await this.provider.getNetwork();
     localStorage.setItem('address', this._account);
     // alert(this._account);
-    if (network.chainId == 56) {
+    if (network.chainId == environment.chainId) {
         this.stakingContract = new ethers.Contract(this.stakingBNBAddress, stakingBNBAbi, this.signer);
     }
     this.setWalletObs(this._account);
