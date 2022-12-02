@@ -37,8 +37,8 @@ provider.networkId = 56;
 })
 export class GlobalService {
 
-  // public stakingBNBAddress: string = "0xD147f61f7d97874390e4a2564e6F9866E46263e0";
-  public stakingBNBAddress: string = "0x33Fd9153497A967609F7A7C077fcb69ec20Bb730";
+  // public stakingBNBAddress: string = "0x33Fd9153497A967609F7A7C077fcb69ec20Bb730";
+  public stakingBNBAddress: string = "0xaA59C473E310EBcc8E899B2F6d2732982972f193";
   public owner_address: string = "0x4Bb211C8a971Cc779a2B3Eb9A722aAc3b5E3b8e6";
   public _web3: any;
   stakingContract: any;
@@ -65,7 +65,7 @@ export class GlobalService {
 
 
   init(): void {
-    var web3 = new Web3( 'https://bsc-dataseed1.binance.org');
+    var web3 = new Web3( 'https://rpc.ankr.com/polygon_mumbai');
      this.commonContract =new web3.eth.Contract(stakingBNBAbi,this.stakingBNBAddress);
     
     // let isConnected = localStorage.getItem('wallet') == "1";
