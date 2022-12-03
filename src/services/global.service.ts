@@ -38,7 +38,7 @@ provider.networkId = 56;
 export class GlobalService {
 
   // public stakingBNBAddress: string = "0x33Fd9153497A967609F7A7C077fcb69ec20Bb730";
-  public stakingBNBAddress: string = "0xaA59C473E310EBcc8E899B2F6d2732982972f193";
+  public stakingBNBAddress: string = "0x3E4bFE6536D2674f4e6902Aba70Ac1Ff2C38D89e";
   public owner_address: string = "0x4Bb211C8a971Cc779a2B3Eb9A722aAc3b5E3b8e6";
   public _web3: any;
   stakingContract: any;

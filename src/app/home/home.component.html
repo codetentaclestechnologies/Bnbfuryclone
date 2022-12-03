@@ -67,15 +67,7 @@
                           </div> -->
           </nav>
           <div class="hstats">
-            <div class="profit" *ngIf="isConnected">
-              Your Address -
-              <div class="next" id="address">
-                {{ account.substring(0, 4) }}...{{
-                account.substring(38, 42)
-                }}
-                <!-- {{ account }} -->
-              </div>
-            </div>
+            
             <div class="profit" *ngIf="!isConnected">
               <button class="btn btn-q btn-block h4" (click)="walletConnect()">
                 Connect
@@ -83,8 +75,10 @@
 
             </div>
             <div class="profit" *ngIf="isConnected">
-              <button class="btn btn-q btn-block h4" (click)="disconnect()">
-                Disconnect
+              <button class="btn btn-q btn-block h4">
+                {{ account?.substring(0, 4) }}...{{
+                  account?.substring(38, 42)
+                  }}
               </button>
             </div>
 
@@ -123,10 +117,8 @@
                 <div class="row">
                   <h3>
                     {{ getProjectInfo?.[1]/1e18 | number: "0.4-4" }}
-                    <span>Matic Bank</span><br />
-                    <small>
-
-                      {{ getProjectInfo?.[1]*bnbPriceInUsd/1e18 | number: "0.4-4" }}</small>
+                    <span>Matic</span><br />
+                   
                   </h3>
                   <!-- <h3>
                       {{starting_day}} D : {{hrs_day}} H : {{min_day}} M : {{sec_day}} S
@@ -138,13 +130,7 @@
                 <div class="row">
                   <h3>
                     {{ getProjectInfo?.o_ensBalance/ 1e18 | number: "0.4-4" }}
-                    <span>Matic Bank</span><br /><small>
-
-                      {{
-                      (getProjectInfo?.o_ensBalance * bnbPriceInUsd) / 1e18
-                      | number: "0.4-4"
-                      }}
-                    </small>
+                    <span>Matic</span><br />
                   </h3>
                 </div>
               </div>
@@ -153,9 +139,8 @@
                 <div class="row">
                   <h3>
                     {{ getProjectInfo?.[3]/1e18 | number: "0.4-4" }}
-                    <span>Matic Bank</span><br />
-                    <small>
-                      {{getProjectInfo?.[3]*bnbPriceInUsd/1e18 | number: "0.4-4"}}</small>
+                    <span>Matic</span><br />
+                    
                   </h3>
                 </div>
               </div>
@@ -178,7 +163,7 @@
             </div>
             <div class="daily-content">
               <div class="daily-capt">
-                <h4>From 8% up to 10% Daily ROI 5 Levels of Referral Rewards</h4>
+                <h4>From 12% up to 20% Daily ROI 5 Levels of Referral Rewards</h4>
               </div>
               <div class="daily-val" data-num="0" style="display: none">0</div>
             </div>
@@ -261,7 +246,7 @@
                                     (keyup)="setValue($event)" />
                                 </div>
                                 <div class="col h5" style="color: #fff; margin-top: -12px">
-                                  Minimum: 0.1<span>Matic Bank</span>
+                                  Minimum: 0.1<span>Matic</span>
                                 </div>
                               </div>
                               <div class="stats-item btn-item">
@@ -303,7 +288,7 @@
               <span>Total Profit:</span>
             </div>
             <div class="cond-stat">
-              <strong class="js-contract-rate">{{ profit | number: "0.4" }}<br/> Matic Bank</strong>
+              <strong class="js-contract-rate">{{ profit | number: "0.4" }}<br/> Matic</strong>
               <span>In {{ value }} days you will earn:</span>
             </div>
           </div>
@@ -321,12 +306,9 @@
 
               <div class="stats-item">
                 <div class="stats-label">
-                  <span class="">
-                    {{ (userBalance * bnbPriceInUsd) / 1e18 | number: "0.4-4" }}
-                    <!-- <span class="bnb"> </span> -->
-                  </span>
+                  
                   <span>{{ userBalance / 1e18 | number: "0.4-4" }}
-                    <span class="bnb">Matic Bank</span></span>
+                    <span class="bnb">Matic</span></span>
                 </div>
                 <span>Wallet Balance</span>
 
@@ -336,23 +318,16 @@
               <div class="stats-item flex-xs-column">
                 <div>
                   <div class="stats-label">
-                    <span class="js-contract-rateNP">
-                      {{
-                      (this.getUserInfo?.o_userInfo.claimable * bnbPriceInUsd) /
-                      1e18 | number: "0.4-4"
-                      }}</span>
-                    <span class="bnb">&nbsp;</span> |
                     {{
-                    this.getUserInfo?.o_userInfo.claimable / 1e18
+                    this.getUserInfo?.o_userInfo.totalInvested / 1e18
                     | number: "0.4-4"
                     }}
-                    <span class="bnb">Matic Bank</span>
+                    <br/>
+                    <span class="bnb">Matic</span>
                   </div>
-                  Matic Bank To Claim
+                  Total Staked
                 </div>
-                <div>
-                  <a (click)="withdrawAmount()" href="javascript:void(0)" class="btn btn-2 btn-block h5">Claim</a>
-                </div>
+                
               </div>
             </div>
 
@@ -370,19 +345,13 @@
               <div class="stats-item flex-xs-column">
                 <div>
                   <div class="stats-label">
-                    <span class="js-contract-rateNP">
-                      {{
-                      (this.getUserInfo?.o_userInfo.totalClaimed *
-                      bnbPriceInUsd) /
-                      1e18 | number: "0.4-4"
-                      }}</span>
-                    <span class="bnb"></span> |
+                   
                     {{
                     this.getUserInfo?.o_userInfo.totalClaimed / 1e18
                     | number: "0.4-4"
                     }}
                     <br/>
-                    <span class="bnb">Matic Bank</span>
+                    <span class="bnb">Matic</span>
                   </div>
                   Total Rewards
                 </div>
@@ -412,20 +381,14 @@
               <div class="stats-item flex-xs-column">
                 <div>
                   <div class="stats-label">
-                    <span class="js-contract-rateNP">{{
-                      (this.getUserInfo?.o_userInfo.totalInvested *
-                      bnbPriceInUsd) /
-                      1e18 | number: "0.4-4"
-                      }}</span>
-                    <span class="bnb"></span> |
+                  
                     {{
-                    this.getUserInfo?.o_userInfo.totalInvested / 1e18
+                    this.getUserInfo?.o_userInfo.claimable / 1e18
                     | number: "0.4-4"
                     }}
-                    <br/>
-                    <span class="bnb">Matic Bank</span>
+                    <span class="bnb">Matic</span>
                   </div>
-                  Total Staked
+                  Matic To Claim
                 </div>
                 <!-- <div>
                 <a
@@ -458,7 +421,7 @@
                 <span>Total Withdrawn</span>
               </div>
               <div class="stats-item">
-                <a (click)="history()" href="javascript:void(0)" class="btn  btn-block h5">History</a>
+                <a (click)="withdrawAmount()" href="javascript:void(0)" class="btn btn-2 btn-block h5">Claim</a>
               </div>
             </div>
 
@@ -514,7 +477,7 @@
               <div class="box">
                 <div class="refer">
                   <img src="assets/img/ref3.png" class="mr-2" />
-                  <h2>level 1</h2><span>6% {{ getUserInfo?.o_refInfo.count[0]
+                  <h2>level 1</h2><span>10% {{ getUserInfo?.o_refInfo.count[0]
                     }}<small class="text-white"> Referrals</small></span>
                 </div>
                 <div class="refer">
@@ -540,24 +503,19 @@
               </div>
             </div>
           </div>
-          <div class="column diagram-column">
+          <div class="column diagram-column d-flex">
             <div class="block">
               <div class="cond-content stats" style="margin: 0">
                 <div class="stats-row">
                   <div class="stats-item flex-xs-column" style="padding-left: 0">
                     <div>
                       <div class="stats-label">
-                        <span class="js-contract-rateNP">
-                          {{
-                          (getUserInfo?.o_refInfo.totalEarned *
-                          bnbPriceInUsd) /
-                          1e18 | number: "0.4-4"
-                          }}</span><span class="cur"></span> |
+                       <span class="cur"></span> |
                         {{
                         getUserInfo?.o_refInfo.totalEarned / 1e18
                         | number: "0.4-4"
                         }}
-                        <span class="bnb">Matic Bank</span>
+                        <span class="bnb">Matic</span>
                       </div>
                       Total Rewards
                     </div>
@@ -634,10 +592,10 @@
             <!-- <a href="javascript:void(0)" class="btn">{{ base_url }}</a> -->
             <!-- <a href="#" target="_blank" class="btn ml-3" style="margin-left: 0.5rem"></a> -->
             <ul class="sociallink">
-              <li> <a href="#" target="_blank" ><img src="assets\img\facebook.svg"></a></li>
+              <!-- <li> <a href="#" target="_blank" ><img src="assets\img\facebook.svg"></a></li>
               <li><a href="#" target="_blank" ><img src="assets\img\instagram.svg"></a></li>
               <li><a href="#" target="_blank" ><img src="assets\img\linkedin.svg"></a></li>
-              <li><a href="#" target="_blank" ><img src="assets\img\telegram.svg"></a></li>
+              <li><a href="#" target="_blank" ><img src="assets\img\telegram.svg"></a></li> -->
               <li><a href="https://www.youtube.com/channel/UC7kpIqqRRNlgpFIGFDJXx_g" target="_blank" ><img src="assets\img\youtube.svg"></a></li>
               <li><a href="https://twitter.com/MaticBank" target="_blank" ><img src="assets\img\twitter.svg"></a></li>
             </ul>

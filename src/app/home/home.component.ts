@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   hidestar: boolean = false;
   value: number = 20;
   options: Options = {
-    floor: 13,
+    floor: 7,
     ceil: 30
   };
   contractaddress: any;
@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit {
   SecondsInAMinute = 60;
 
   erroroccuredaccount: boolean = true;
-  plans: any = [8.4, 8.5, 8.6, 8.7, 8.7, 8.8, 8.9, 9, 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.7, 9.8, 9.9, 10, 10.1];
+  plans: any = [20.00,18.75,17.77,17.00,16.36,15.83,15.38,15.00,14.66,14.37,14.11,13.88,13.68,13.50,13.33,13.18,13.04,12.91,12.80,12.69,12.59,12.50,12.41,12.33];
   totalprofit: number = 0;
   bnbPriceInUsd = 0;
   userHistory: any;
@@ -113,8 +113,8 @@ export class HomeComponent implements OnInit {
 
   changeSlider() {
     let days = this.value;
-    this.holdBonus = (this.plans[(days - 13)]);
-    this.totalprofit = this.plans[(days - 13)]*days;
+    this.holdBonus = (this.plans[(days - 7)]);
+    this.totalprofit = this.plans[(days - 7)]*days;
     this.profit = (this.investment * (this.holdBonus / 100)) * days;
   }
 
@@ -227,6 +227,7 @@ export class HomeComponent implements OnInit {
   }
 
   copyInputMessage(inputElement: any) {
+    debugger
     inputElement.select();
     document.execCommand('copy');
     inputElement.setSelectionRange(0, 0);
@@ -236,7 +237,7 @@ export class HomeComponent implements OnInit {
   async makeNewDeposit(amt: any) {
     try {
       var amount = ethers.utils.parseEther(amt);
-      await this.cs.invest(this.url_id, this.value - 13, amount);
+      await this.cs.invest(this.url_id, this.value - 7, amount);
     } catch (e: any) {
       if(e.data!=undefined)
       this.toastr.error(e.data.message);
