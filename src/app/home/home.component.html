@@ -510,7 +510,7 @@
                   <div class="stats-item flex-xs-column" style="padding-left: 0">
                     <div>
                       <div class="stats-label">
-                       <span class="cur"></span> |
+                       <span class="cur"></span>
                         {{
                         getUserInfo?.o_refInfo.totalEarned / 1e18
                         | number: "0.4-4"
@@ -554,6 +554,33 @@
         </div>
       </div>
     </section>
+
+    <!-- <section class="despositss">
+      <div class="wrapper">
+        <h2><strong>User Deposits</strong></h2>
+        <div class="block" style="width:100% !important">
+          <div class="table-responsive">
+            <table class="table-striped">
+              <thead class="thead-dark">
+                <tr>
+                  <th>Invested</th>
+                  <th>Days</th>
+                  <th>Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let depositHistory of display; index as i">
+                  <td>{{ depositHistory.timestamp }} ago</td>
+                  <td>{{ depositHistory.duration }}</td>
+                  <td>{{ depositHistory.amount | number: "0.4-4" }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
 
     <section class="despositss">
       <div class="wrapper">

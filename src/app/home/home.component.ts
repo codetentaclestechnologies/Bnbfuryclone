@@ -214,7 +214,7 @@ export class HomeComponent implements OnInit {
             sendTime=Time+" D";
           }
         }
-        this.display.push({ timestamp: sendTime.toString(), duration: (this.getDepositHistory.o_historyDeposits[i].duration/86400), amount: (this.getDepositHistory.o_historyDeposits[i].amount) / 1e18 });
+        this.display.push({ timestamp: sendTime.toString(), duration: (this.getDepositHistory.o_historyDeposits[i].duration/60), amount: (this.getDepositHistory.o_historyDeposits[i].amount) / 1e18 });
       }
     }
     // this.userHistory = await this.cs.getUserDepositHistory(this.account, 1);

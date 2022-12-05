@@ -27,7 +27,9 @@
 
 .why {
   font-weight: 400;
-  margin-top: 6rem !important;
+  font-weight: 400;
+    margin: auto;
+    width: 100%;
 }
 
 .about-info .block {
