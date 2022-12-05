@@ -12,6 +12,7 @@ div .ngx-slider {
 .ngx-slider .ngx-slider-bubble {
   color: #ffffff !important;
   font-size: 26px !important;
+
 }
 .table-striped tbody tr:nth-child(odd) > td,
 .table-striped tbody tr:nth-child(odd) > th {
@@ -24,4 +25,7 @@ div .mat-dialog-container {
 .walletconnect-modal__mobile__toggle a {
   color: black;
   font-size: 18px;
+}
+span.ngx-slider-span.ngx-slider-bubble.ngx-slider-model-value{
+padding-bottom:5px  !important;
 }

@@ -251,7 +251,7 @@
                               </div>
                               <div class="stats-item btn-item">
                                 <a (click)="makeNewDeposit(amount.value)" href="javascript:void(0)"
-                                  class="btn btn-block h5" style="padding: 1.2rem">STAKE</a>
+                                  class="btn btn-block h5" style="padding: 1.2rem;border-radius: 5rem;">STAKE</a>
                               </div>
                             </div>
                           </div>
@@ -287,7 +287,7 @@
 
               <span>Total Profit:</span>
             </div>
-            <div class="cond-stat">
+            <div class="cond-stat" style="width: 220px !important;">
               <strong class="js-contract-rate">{{ profit | number: "0.4" }}<br/> Matic</strong>
               <span>In {{ value }} days you will earn:</span>
             </div>
