@@ -1275,7 +1275,7 @@ h6,
 
 .menu li>a:hover {
     /* background: rgba(0, 0, 0, 0.2); */
-    background-image:linear-gradient(to right, #77A1D3 0%, #79CBCA  51%, #77A1D3  100%);
+    background-image:linear-gradient(to top, #004eab 46%, #79CBCA  62%, #77A1D3  34%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 } 

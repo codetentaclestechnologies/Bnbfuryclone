@@ -87,6 +87,7 @@ html {
 
 nav li a {
   font-size: 1.1rem !important;
+  font-weight: 700;
 }
 
 .block {
