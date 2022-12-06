@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.countdown(1647961228);
+    this.countdown(1670583600);
     setTimeout(() => {
       this.hidestar = false;
     }, 5000);
