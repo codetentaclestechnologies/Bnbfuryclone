@@ -118,7 +118,7 @@ nav li a {
 
 .block .row {
   border: 1px solid #111927;
-  padding-top: 1.1rem;
+  padding: 1.1rem;
   width: 100%;
   display: block;
   border-radius: 14px;
@@ -128,6 +128,7 @@ nav li a {
   background: #1e2838;
   color: #ffffff;
   outline: none !important;
+  margin: 0;
 }
 
 
@@ -147,6 +148,7 @@ nav li a {
 
 .block h3 {
    font-size: 1.5rem;
+   margin: 0;
 }
 
 .block h3 span,
@@ -227,13 +229,31 @@ nav li a {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline;
+  width: 100%;
 }
 
 .cond-content .row .s-btn {
   width: 2rem;
   background: #df9906;
 }
-
+.ngx-slider .ngx-slider-bar-wrapper {
+  left: 0;
+  box-sizing: border-box;
+  margin-top: -16px;
+  padding-top: 16px;
+  width: 100%;
+  height: 32px;
+  z-index: 0 !important;
+}
+.ngx-slider .ngx-slider-pointer {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  top: -14px;
+  background-color: #0db9f0;
+  z-index: 0 !important;
+  border-radius: 16px;
+}
 .cond-content .row .in {
   width: 10rem !important;
   display: -webkit-box;

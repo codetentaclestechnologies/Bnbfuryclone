@@ -9,6 +9,14 @@
 }
 a.nav-link {
   color: black;
+  transition: 0.5s;
+}
+a.nav-link:hover{
+  background: linear-gradient(to right, #1060bf 51%, #24a9a7 83%, #3d628f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  transition: 0.5s;
 }
 .bnbnav{
   position: fixed;

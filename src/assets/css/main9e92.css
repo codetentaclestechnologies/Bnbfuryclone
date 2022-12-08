@@ -1471,7 +1471,7 @@ h6,
     background: #0b0f2d;
     border-radius: 15px;
     margin: 0 0 16px;
-    padding: 51px 44px 32px;
+    padding: 23px 24px 23px !important;
     position: relative;
     box-shadow: 10px 10px 70px rgba(0, 0, 0, 0.13);
 }
@@ -2518,6 +2518,7 @@ code[class*="language-"]::selection {
     /* margin-LEFT:50%; */
     line-height: normal;
     display: flex;
+    margin: auto;
 }
 
 .cond-main:before,
@@ -2546,6 +2547,7 @@ code[class*="language-"]::selection {
     line-height: normal;
     font-weight: 400;
     margin-bottom: 10px;
+    width: 100%;
 
 }
 
@@ -2592,12 +2594,12 @@ code[class*="language-"]::selection {
     border: 2px dashed #091322;
     background: rgba(25, 34, 49, 0.75);
     /* border-left: none; */
-    padding: 26px 10px 26px 24px;
+    padding: 4%;
     border-radius: 40px;
 }
 
 .pref-item {
-    padding-right: 20px;
+    
     flex: 1;
 }
 
@@ -2641,7 +2643,7 @@ code[class*="language-"]::selection {
 }
 
 .pref-capt {
-    margin-top: 1rem;
+    
     font-weight: 500;
 }
 
