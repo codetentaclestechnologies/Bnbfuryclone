@@ -1,19 +1,96 @@
 <body class="home">
   <div class="page-wrap">
-    <div class="main-section"
-      style="background:#000000 url('assets/img/Banner.jpg') no-repeat scroll top center / cover">
+    <div
+      class="main-section"
+      style="
+        background: #000000 url('assets/img/Banner.jpg') no-repeat scroll top
+          center / cover;
+      "
+    >
       <div class="decor"></div>
+      <nav class="navbar navbar-expand-lg bg-light p-0 bnbnav">
+        <div class="container-fluid p-0">
+          <a href="#" class="logo navbar-brand">
+            <img src="assets\img\logo.png" alt="" />
+          </a>
+
+          <a
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="margin: 0 0 0 auto"
+          >
+            <span class=""
+              ><label for="a" class="mobiletoggle mobilelabel">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div> </label
+            ></span>
+          </a>
+          <div class="collapse navbar-collapse p-0" id="navbarSupportedContent">
+            <ul
+              class="navbar-nav mr-auto mb-2 mb-lg-0"
+              style="margin: auto 0 0 auto; padding: 10px"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="javascript:void(0)"
+                  (click)="
+                    element.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'center'
+                    })
+                  "
+                  >Deposit</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="https://polygonscan.com/address/0xbA6a65dD28816D5f22aC5B9c1c1fc563422108cF"
+                  target="_blank"
+                  >Contract</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="https://t.me/maticbankapp"
+                  target="_blank"
+                  >Telegram</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="profit" *ngIf="!isConnected">
+              <button class="btn btn-q btn-block h4" (click)="walletConnect()">
+                Connect
+              </button>
+            </div>
+            <div class="profit" *ngIf="isConnected">
+              <button class="btn btn-q btn-block h4">
+                {{ account?.substring(0, 4) }}...{{
+                  account?.substring(38, 42)
+                }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
       <header class="header">
-
-
         <!-- ///mobile menu nav bar// -->
 
         <!---end-->
-        <div class="t-panel">
-          <a href="#" class="logo">
-            <img src="assets\img\logo.png" alt="" />
-          </a>
-          <!---mobile-->
+        <!-- <div class="t-panel">
+         
           <div class="mobileview">
             <label for="a" class="mobiletoggle">
               <div class="bar1"></div>
@@ -22,80 +99,38 @@
             </label>
             <input type="checkbox" id="a" />
             <ul class="mobilemenu">
-              <li> <a href="javascript:void(0)" (click)="
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        })
-      ">Deposit</a></li>
-              <li> <a href="https://polygonscan.com/address/0xbA6a65dD28816D5f22aC5B9c1c1fc563422108cF" target="_blank"
-                >Contract</a></li>
+              <li>
+                <a
+                  href="javascript:void(0)"
+                  (click)="
+                    element.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'center'
+                    })
+                  "
+                  >Deposit</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://polygonscan.com/address/0xbA6a65dD28816D5f22aC5B9c1c1fc563422108cF"
+                  target="_blank"
+                  >Contract</a
+                >
+              </li>
 
-              <li><a href="https://t.me/maticbankapp" target="_blank">Telegram</a></li>
-
+              <li>
+                <a href="https://t.me/maticbankapp" target="_blank">Telegram</a>
+              </li>
             </ul>
-          </div>
-          <!---end-->
-
-          <nav class="main-nav">
-
-            <div class="menu-wrap">
-              <ul class="menu">
-                <li>
-                  <a href="javascript:void(0)" (click)="
-                        element.scrollIntoView({
-                          behavior: 'smooth',
-                          block: 'center'
-                        })
-                      ">Deposit</a>
-                </li>
-                <li>
-                  <a href="https://polygonscan.com/address/0xbA6a65dD28816D5f22aC5B9c1c1fc563422108cF" target="_blank"
-                    style="margin-left: 0.5rem">Contract</a>
-                </li>
-                <li>
-                  <a href="https://t.me/maticbankapp" target="_blank">Telegram</a>
-                </li>
-              </ul>
-            </div>
-            <!-- <div class="btn-wrap">
-                              <a data-modal="" onclick="connect()" id="btnc" class="" data-src="#stat">
-                                  <span style="font-size: 1.2rem; display: none;" class="mt-2" id="connect">Connect</span>
-                                  <span style="font-size:1.2rem" class="mt-2" id="dashboard">Dashboard</span>
-                              </a>
-  
-                          </div> -->
-          </nav>
-          <div class="hstats">
             
-            <div class="profit" *ngIf="!isConnected">
-              <button class="btn btn-q btn-block h4" (click)="walletConnect()">
-                Connect
-              </button>
-
-            </div>
-            <div class="profit" *ngIf="isConnected">
-              <button class="btn btn-q btn-block h4">
-                {{ account?.substring(0, 4) }}...{{
-                  account?.substring(38, 42)
-                  }}
-              </button>
-            </div>
-
           </div>
-        </div>
-        <!-- <div class="lang">
-                        <span class="lang-title">Select language</span>
-                        <ul>
-                            <li><a href="#"><span class="lang-icon us"></span></a>
-                            </li>
-                        </ul>
-                    </div> -->
+         
 
-
+          
+        </div> -->
       </header>
-      <div class="wrapper clearfix" style="display: flex;padding-top:60px;">
-
+      <div class="wrapper clearfix" style="display: flex; padding-top: 60px">
         <div class="main-content .d-block">
           <a href="#" class="logo">
             <!-- <img src="assets/img/A_letter_logo-removebg-preview3.png" alt=""> -->
@@ -103,11 +138,10 @@
           <h1>Matic Bank Easy yield Smart Contract</h1>
 
           <p>
-            Stable & Profitable Yield Farming Dapp With <br> Automated Users
-            Insurance?
+            Stable & Profitable Yield Farming Dapp With <br />
+            Automated Users Insurance?
           </p>
         </div>
-
 
         <div class="block">
           <div class="calc-top">
@@ -121,15 +155,16 @@
                    
                   </h3> -->
                   <h3>
-                      {{starting_day}} D : {{hrs_day}} H : {{min_day}} M : {{sec_day}} S
-                    </h3>
+                    {{ starting_day }} D : {{ hrs_day }} H : {{ min_day }} M :
+                    {{ sec_day }} S
+                  </h3>
                 </div>
               </div>
               <div class="box">
                 <h2>Insurance Pool?</h2>
                 <div class="row">
                   <h3>
-                    {{ getProjectInfo?.o_ensBalance/ 1e18 | number: "0.4-4" }}
+                    {{ getProjectInfo?.o_ensBalance / 1e18 | number : "0.4-4" }}
                     <span>Matic</span><br />
                   </h3>
                 </div>
@@ -140,7 +175,6 @@
                   <h3>
                     {{ getProjectInfo?.[3]/1e18 | number: "0.4-4" }}
                     <span>Matic</span><br />
-                    
                   </h3>
                 </div>
               </div>
@@ -149,7 +183,6 @@
         </div>
       </div>
     </div>
-
 
     <div class="daily-sec">
       <div class="wrapper-clearfix">
@@ -163,7 +196,9 @@
             </div>
             <div class="daily-content">
               <div class="daily-capt">
-                <h4>From 12% up to 20% Daily ROI 5 Levels of Referral Rewards</h4>
+                <h4>
+                  From 12% up to 20% Daily ROI 5 Levels of Referral Rewards
+                </h4>
               </div>
               <div class="daily-val" data-num="0" style="display: none">0</div>
             </div>
@@ -174,41 +209,47 @@
 
     <div class="about">
       <div class="wrapper clearfix">
-
         <div class="about-content">
           <div class="about-list">
             <div class="about-row">
               <div class="about-item">
-                <img src="assets\img\fund.png" alt="Investor">
-                <p>Flexible architecture will be profitable for any investor: just
-                  choose your plan and Claim the profits!</p>
-
+                <img src="assets\img\fund.png" alt="Investor" />
+                <p>
+                  Flexible architecture will be profitable for any investor:
+                  just choose your plan and Claim the profits!
+                </p>
               </div>
               <div class="about-item">
-                <img src="assets\img\book.png" alt="project">
-                <p>Generosity is balanced by two simple rules: max 24 Claims per day,
-                  max 50 Matic at once</p>
-              </div>
-            </div>
-            <div class="about-row">
-
-              <div class="about-item">
-                <img src="assets\img\deposit.png" alt="Deposit">
-                <p>Earn when people invited by you make deposits. You also benefit
-                  from their Referrals!</p>
-
-              </div>
-              <div class="about-item">
-                <img src="assets\img\question.png" alt="Question">
-                <p>Feel free to ask any question in our group any time, we will be
-                  glad to help you!</p>
+                <img src="assets\img\book.png" alt="project" />
+                <p>
+                  Generosity is balanced by two simple rules: max 24 Claims per
+                  day, max 50 Matic at once
+                </p>
               </div>
             </div>
             <div class="about-row">
               <div class="about-item">
-                <img src="assets\img\project.png" alt="project">
-                <p>A special standalone contract guards the Project against balance
-                  draining and keeps it alive</p>
+                <img src="assets\img\deposit.png" alt="Deposit" />
+                <p>
+                  Earn when people invited by you make deposits. You also
+                  benefit from their Referrals!
+                </p>
+              </div>
+              <div class="about-item">
+                <img src="assets\img\question.png" alt="Question" />
+                <p>
+                  Feel free to ask any question in our group any time, we will
+                  be glad to help you!
+                </p>
+              </div>
+            </div>
+            <div class="about-row">
+              <div class="about-item">
+                <img src="assets\img\project.png" alt="project" />
+                <p>
+                  A special standalone contract guards the Project against
+                  balance draining and keeps it alive
+                </p>
               </div>
             </div>
           </div>
@@ -222,7 +263,6 @@
         </h2>
 
         <div class="cond clearfix">
-
           <div class="cond-content">
             <div class="pref-list">
               <div class="pref-item">
@@ -233,26 +273,46 @@
                         <span>Deposit period(days):</span>
                       </div>
 
-                      <ngx-slider (userChange)="changeSlider()" class="mb-5" [(value)]="value" [options]="options">
+                      <ngx-slider
+                        (userChange)="changeSlider()"
+                        class="mb-5"
+                        [(value)]="value"
+                        [options]="options"
+                      >
                       </ngx-slider>
                       <form action="#" class="deposit-form">
                         <div class="deposit-form__wrap">
                           <div class="deposit-form__field">
-                            <span class="h3 text-white">Deposit Account</span>
+                            <span class="h3 text-white mb-3">Deposit Account</span>
                             <div class="row">
-                              <div class="w-100">
-                                <div class="col in">
-                                  <input #amount type="number" class="enter_amt number-input__input" value="0.0"
-                                    (keyup)="setValue($event)" />
-                                </div>
-                                <div class="col h5" style="color: #fff; margin-top: -12px">
+                              <div class="col-md-8">
+                                <input
+                                  #amount
+                                  type="number"
+                                  class="enter_amt number-input__input"
+                                  value="0.0"
+                                  (keyup)="setValue($event)"
+                                />
+                                <div
+                                  class="h5"
+                                  style="color: #fff; margin-top: 0px"
+                                >
                                   Minimum: 0.1<span>Matic</span>
                                 </div>
                               </div>
-                              <div class="stats-item btn-item">
-                                <a (click)="makeNewDeposit(amount.value)" href="javascript:void(0)"
-                                  class="btn btn-block h5" style="padding: 1.2rem">STAKE</a>
+                              <div class="col-md-4">
+                                <div class="stats-item btn-item">
+                                  <a
+                                    (click)="makeNewDeposit(amount.value)"
+                                    href="javascript:void(0)"
+                                    class="btn btn-block h5"
+                                    style="padding: 1rem"
+                                    >STAKE</a
+                                  >
+                                </div>
                               </div>
+
+                              
                             </div>
                           </div>
                         </div>
@@ -279,65 +339,72 @@
 
           <div class="cond-main">
             <div class="cond-stat">
-              <strong class="js-contract-rate">{{ holdBonus | number: "0.2" }}%</strong>
+              <strong class="js-contract-rate"
+                >{{ holdBonus | number : "0.2" }}%</strong
+              >
               <span>Daily ROI</span>
             </div>
-            <div class="cond-stat" style="border-right: 2px dashed #fff;border-left: 2px dashed #fff;">
-              <strong class="js-contract-rate">{{ totalprofit | number: "0.2" }}%</strong>
+            <div
+              class="cond-stat"
+              style="
+                border-right: 2px dashed #fff;
+                border-left: 2px dashed #fff;
+              "
+            >
+              <strong class="js-contract-rate"
+                >{{ totalprofit | number : "0.2" }}%</strong
+              >
 
               <span>Total Profit:</span>
             </div>
             <div class="cond-stat">
-              <strong class="js-contract-rate">{{ profit | number: "0.4" }}<br/> Matic</strong>
+              <strong class="js-contract-rate"
+                >{{ profit | number : "0.4" }}<br />
+                Matic</strong
+              >
               <span>In {{ value }} days you will earn:</span>
             </div>
           </div>
-
         </div>
       </div>
     </section>
     <section class="statsss">
       <div class="wrapper wrapper-pt3 clearfix">
-        <h2><strong>Your Account</strong> </h2>
+        <h2><strong>Your Account</strong></h2>
         <div class="block">
           <div class="stats" style="margin: 0">
-
-            <div class="stats-row " style="background-color: #0b0f2d;">
-
+            <div class="stats-row" style="background-color: #0b0f2d">
               <div class="stats-item">
                 <div class="stats-label">
-                  
-                  <span>{{ userBalance / 1e18 | number: "0.4-4" }}
-                    <span class="bnb">Matic</span></span>
+                  <span
+                    >{{ userBalance / 1e18 | number : "0.4-4" }}
+                    <span class="bnb">Matic</span></span
+                  >
                 </div>
                 <span>Wallet Balance</span>
-
-
               </div>
 
               <div class="stats-item flex-xs-column">
                 <div>
                   <div class="stats-label">
                     {{
-                    this.getUserInfo?.o_userInfo.totalInvested / 1e18
-                    | number: "0.4-4"
+                      this.getUserInfo?.o_userInfo.totalInvested / 1e18
+                        | number : "0.4-4"
                     }}
-                    <br/>
+                    <br />
                     <span class="bnb">Matic</span>
                   </div>
                   Total Staked
                 </div>
-                
               </div>
             </div>
-
 
             <div class="stats-row">
               <div class="stats-item">
                 <div class="stats-label">
                   <span class="js-contract-rateNP">{{
                     getUserInfo?.o_planInfo.mActive
-                    }}</span>
+                  }}</span>
                   <span class="cur"> Plan</span>
                 </div>
                 <span>Active Plans</span>
@@ -345,12 +412,11 @@
               <div class="stats-item flex-xs-column">
                 <div>
                   <div class="stats-label">
-                   
                     {{
-                    this.getUserInfo?.o_userInfo.totalClaimed / 1e18
-                    | number: "0.4-4"
+                      this.getUserInfo?.o_userInfo.totalClaimed / 1e18
+                        | number : "0.4-4"
                     }}
-                    <br/>
+                    <br />
                     <span class="bnb">Matic</span>
                   </div>
                   Total Rewards
@@ -366,25 +432,22 @@
               </div>
             </div>
 
-
             <div class="stats-row">
               <div class="stats-item">
                 <div class="stats-label">
                   <span class="js-contract-rateNP">{{
                     getUserInfo?.o_planInfo.rActive
-                    }}</span>
+                  }}</span>
                   <span class="cur"> Plan</span>
                 </div>
                 <span> Reinvest Active plans</span>
-
               </div>
               <div class="stats-item flex-xs-column">
                 <div>
                   <div class="stats-label">
-                  
                     {{
-                    this.getUserInfo?.o_userInfo.claimable / 1e18
-                    | number: "0.4-4"
+                      this.getUserInfo?.o_userInfo.claimable / 1e18
+                        | number : "0.4-4"
                     }}
                     <span class="bnb">Matic</span>
                   </div>
@@ -410,18 +473,23 @@
             </div> -->
             </div>
 
-
             <div class="stats-row">
               <div class="stats-item">
                 <div class="stats-label">
                   <span class="js-contract-rateNP">{{
-                    getUserInfo?.o_userInfo.totalClaimed / 1e18 | number: "0.4-4"
-                    }}</span>
+                    getUserInfo?.o_userInfo.totalClaimed / 1e18
+                      | number : "0.4-4"
+                  }}</span>
                 </div>
                 <span>Total Withdrawn</span>
               </div>
               <div class="stats-item">
-                <a (click)="withdrawAmount()" href="javascript:void(0)" class="btn btn-2 btn-block h5">Claim</a>
+                <a
+                  (click)="withdrawAmount()"
+                  href="javascript:void(0)"
+                  class="btn btn-2 btn-block h5"
+                  >Claim</a
+                >
               </div>
             </div>
 
@@ -437,23 +505,28 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr *ngFor="let getUserDepositHistory of o_deposits; index as i">
+                    <tr
+                      *ngFor="
+                        let getUserDepositHistory of o_deposits;
+                        index as i
+                      "
+                    >
                       <td>
                         {{
-                        getUserDepositHistory.timeStart * 1000
-                        | date: "yyyy-MM-dd H:m:s"
+                          getUserDepositHistory.timeStart * 1000
+                            | date : "yyyy-MM-dd H:m:s"
                         }}
                       </td>
                       <td>
                         {{
-                        getUserDepositHistory.timeEnd * 1000
-                        | date: "yyyy-MM-dd H:m:s"
+                          getUserDepositHistory.timeEnd * 1000
+                            | date : "yyyy-MM-dd H:m:s"
                         }}
                       </td>
                       <td>{{ getUserDepositHistory.planIdx * 1 + 6 }}</td>
                       <td>
                         {{
-                        getUserDepositHistory.amount / 1e18 | number: "0.4-4"
+                          getUserDepositHistory.amount / 1e18 | number : "0.4-4"
                         }}
                       </td>
                     </tr>
@@ -461,8 +534,6 @@
                 </table>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -470,35 +541,52 @@
     <section class="why" id="about">
       <div class="wrapper">
         <h2><strong>Referral Program</strong></h2>
-        <p style="text-align:center;">Stake atleast once to receive referral rewards!</p>
+        <p style="text-align: center">
+          Stake atleast once to receive referral rewards!
+        </p>
         <div class="why-columns">
           <div class="column">
             <div class="why-content">
               <div class="box">
                 <div class="refer">
                   <img src="assets/img/ref3.png" class="mr-2" />
-                  <h2>level 1</h2><span>10% {{ getUserInfo?.o_refInfo.count[0]
-                    }}<small class="text-white"> Referrals</small></span>
+                  <h2>level 1</h2>
+                  <span
+                    >10% {{ getUserInfo?.o_refInfo.count[0]
+                    }}<small class="text-white"> Referrals</small></span
+                  >
                 </div>
                 <div class="refer">
                   <img src="assets/img/ref3.png" class="mr-2" />
-                  <h2>level 2</h2><span>3% {{ getUserInfo?.o_refInfo.count[1]
-                    }}<small class="text-white"> Referrals</small></span>
+                  <h2>level 2</h2>
+                  <span
+                    >3% {{ getUserInfo?.o_refInfo.count[1]
+                    }}<small class="text-white"> Referrals</small></span
+                  >
                 </div>
                 <div class="refer">
                   <img src="assets/img/ref3.png" class="mr-2" />
-                  <h2>level 3</h2><span>2% {{ getUserInfo?.o_refInfo.count[2]
-                    }}<small class="text-white"> Referrals</small></span>
+                  <h2>level 3</h2>
+                  <span
+                    >2% {{ getUserInfo?.o_refInfo.count[2]
+                    }}<small class="text-white"> Referrals</small></span
+                  >
                 </div>
                 <div class="refer">
                   <img src="assets/img/ref3.png" class="mr-2" />
-                  <h2>level 4</h2><span>1% {{ getUserInfo?.o_refInfo.count[3]
-                    }}<small class="text-white"> Referrals</small></span>
+                  <h2>level 4</h2>
+                  <span
+                    >1% {{ getUserInfo?.o_refInfo.count[3]
+                    }}<small class="text-white"> Referrals</small></span
+                  >
                 </div>
                 <div class="refer">
                   <img src="assets/img/ref3.png" class="mr-2" />
-                  <h2>level 5</h2><span>0.5% {{ getUserInfo?.o_refInfo.count[4]
-                    }}<small class="text-white"> Referrals</small></span>
+                  <h2>level 5</h2>
+                  <span
+                    >0.5% {{ getUserInfo?.o_refInfo.count[4]
+                    }}<small class="text-white"> Referrals</small></span
+                  >
                 </div>
               </div>
             </div>
@@ -507,13 +595,16 @@
             <div class="block">
               <div class="cond-content stats" style="margin: 0">
                 <div class="stats-row">
-                  <div class="stats-item flex-xs-column" style="padding-left: 0">
+                  <div
+                    class="stats-item flex-xs-column"
+                    style="padding-left: 0"
+                  >
                     <div>
                       <div class="stats-label">
-                       <span class="cur"></span>
+                        <span class="cur"></span>
                         {{
-                        getUserInfo?.o_refInfo.totalEarned / 1e18
-                        | number: "0.4-4"
+                          getUserInfo?.o_refInfo.totalEarned / 1e18
+                            | number : "0.4-4"
                         }}
                         <span class="bnb">Matic</span>
                       </div>
@@ -521,21 +612,44 @@
                     </div>
                   </div>
                 </div>
-                <div class="row" style="background: transparent; border: none; padding-top: 0">
-                  <div class="w-100">
-                    <div class="col in">
-                      <input type="text" #reflink value="{{ base_url }}/ref/{{ account }}"
-                        class="enter_amt number-input__input" readonly />
-                    </div>
-                    <div class="col" style="color: #d3d3d3; margin-top: -12px;margin-left:20px;">
+                <div
+                  class="row"
+                  style="background: transparent; border: none; padding-top: 0"
+                >
+                  
+                    <div class="col-md-8">
+                      <input
+                        type="text"
+                        #reflink
+                        value="{{ base_url }}/ref/{{ account }}"
+                        class="enter_amt number-input__input"
+                        readonly
+                      />
+                      <div
+                      
+                      style="
+                        color: #d3d3d3;
+                        margin-top: 0px;
+                        margin-left: 20px;
+                      "
+                    >
                       Note: Reflink will not function until you make your first
                       investment
                     </div>
-                  </div>
-                  <div class="stats-item btn-item">
-                    <a href="javascript:void(0)" (click)="copyInputMessage(reflink)" class="btn btn-block h5"
-                      style="padding: 1.2rem">Copy</a>
-                  </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <div class=" stats-item btn-item">
+                        <a
+                          href="javascript:void(0)"
+                          (click)="copyInputMessage(reflink)"
+                          class="btn btn-block h5"
+                          style="padding: 1.2rem"
+                          >Copy</a
+                        >
+                      </div>
+                    </div>
+                 
                 </div>
               </div>
             </div>
@@ -581,11 +695,10 @@
       </div>
     </section> -->
 
-
     <section class="despositss">
       <div class="wrapper">
         <h2><strong>Latest Deposits</strong></h2>
-        <div class="block" style="width:100% !important">
+        <div class="block" style="width: 100% !important">
           <div class="table-responsive">
             <table class="table-striped">
               <thead class="thead-dark">
@@ -599,7 +712,7 @@
                 <tr *ngFor="let depositHistory of display; index as i">
                   <td>{{ depositHistory.timestamp }} ago</td>
                   <td>{{ depositHistory.duration }}</td>
-                  <td>{{ depositHistory.amount | number: "0.4-4" }}</td>
+                  <td>{{ depositHistory.amount | number : "0.4-4" }}</td>
                 </tr>
               </tbody>
             </table>
@@ -610,25 +723,38 @@
   </div>
 
   <footer class="footer" id="contacts">
-
     <div class="footer-bottom">
-      <div class="wrapper">
+      
         <div class="fb-content">
           <!-- <span class="fb-title">Reserve Links</span> -->
-          <div style="MARGIN:0 AUTO"> 
+          <div style="margin: 0 AUTO">
             <!-- <a href="javascript:void(0)" class="btn">{{ base_url }}</a> -->
             <!-- <a href="#" target="_blank" class="btn ml-3" style="margin-left: 0.5rem"></a> -->
             <ul class="sociallink">
               <!-- <li> <a href="#" target="_blank" ><img src="assets\img\facebook.svg"></a></li>
               <li><a href="#" target="_blank" ><img src="assets\img\instagram.svg"></a></li>
               <li><a href="#" target="_blank" ><img src="assets\img\linkedin.svg"></a></li>-->
-              <li><a href="https://t.me/maticbankapp" target="_blank" ><img src="assets\img\telegram.svg"></a></li> 
-              <li><a href="https://www.youtube.com/channel/UC7kpIqqRRNlgpFIGFDJXx_g" target="_blank" ><img src="assets\img\youtube.svg"></a></li>
-              <li><a href="https://twitter.com/MaticBank" target="_blank" ><img src="assets\img\twitter.svg"></a></li>
+              <li>
+                <a href="https://t.me/maticbankapp" target="_blank"
+                  ><img src="assets\img\telegram.svg"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UC7kpIqqRRNlgpFIGFDJXx_g"
+                  target="_blank"
+                  ><img src="assets\img\youtube.svg"
+                /></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/MaticBank" target="_blank"
+                  ><img src="assets\img\twitter.svg"
+                /></a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
+    
   </footer>
 </body>
