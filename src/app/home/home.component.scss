@@ -7,6 +7,22 @@
   font-family: fontRegular;
   align-items: flex-end;
 }
+a.nav-link {
+  color: black;
+  transition: 0.5s;
+}
+a.nav-link:hover{
+  background: linear-gradient(to right, #1060bf 51%, #24a9a7 83%, #3d628f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  transition: 0.5s;
+}
+.bnbnav{
+  position: fixed;
+    width: 100%;
+    z-index: 1;
+}
 
 .jJAzoG img {
   width: 120px;
@@ -20,9 +36,10 @@ input.enter_amt.number-input__input {
   background: transparent;
   color: white;
   box-shadow: none;
-  border: none;
+  border: 1px solid #f0ba4a;
   padding: 1rem;
   outline: none !important;
+  border-radius: 6px;
 }
 div .cond-content .row .in {
   width: 100% !important;

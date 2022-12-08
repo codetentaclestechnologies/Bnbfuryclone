@@ -1031,7 +1031,7 @@ h6,
 .profit {
     font-size: 16px;
     color: #d3d3d3;
-    margin-right: 25px;
+    margin: 0 25px;
     line-height: normal;
     font-weight: 500;
 }
@@ -1471,7 +1471,7 @@ h6,
     background: #0b0f2d;
     border-radius: 15px;
     margin: 0 0 16px;
-    padding: 51px 44px 32px;
+    padding: 23px 24px 23px !important;
     position: relative;
     box-shadow: 10px 10px 70px rgba(0, 0, 0, 0.13);
 }
@@ -1493,7 +1493,7 @@ h6,
     width: 38.5%;
     margin-top: -427p */
     position: relative;
-    z-index: 5;
+    z-index: 0;
 }
 
 .about-info:before {
@@ -1972,6 +1972,7 @@ h6,
     margin-top: 0rem;
     padding: 0;
     padding-left: 10px;
+    width: 100%;
 }
 
 .stats-item.btn-item:before {
@@ -2512,11 +2513,12 @@ code[class*="language-"]::selection {
     padding: 20px;
     color: #fff;
     position: relative;
-    z-index: 5;
+    z-index: 0;
     /* min-height: 269px; */
     /* margin-LEFT:50%; */
     line-height: normal;
     display: flex;
+    margin: auto;
 }
 
 .cond-main:before,
@@ -2545,6 +2547,7 @@ code[class*="language-"]::selection {
     line-height: normal;
     font-weight: 400;
     margin-bottom: 10px;
+    width: 100%;
 
 }
 
@@ -2591,12 +2594,12 @@ code[class*="language-"]::selection {
     border: 2px dashed #091322;
     background: rgba(25, 34, 49, 0.75);
     /* border-left: none; */
-    padding: 26px 10px 26px 24px;
+    padding: 4%;
     border-radius: 40px;
 }
 
 .pref-item {
-    padding-right: 20px;
+    
     flex: 1;
 }
 
@@ -2640,7 +2643,7 @@ code[class*="language-"]::selection {
 }
 
 .pref-capt {
-    margin-top: 1rem;
+    
     font-weight: 500;
 }
 
@@ -6624,16 +6627,25 @@ td {
     .bar1,
     .bar2,
     .bar3 {
-        width: 20px;
-        height: 5px;
-        background-color: #000;
-        margin: 6px 0;
-        transition: 0.4s;
-        border: 1px solid #000;
+        width: 30px;
+    height: 5px;
+    background-color: #000;
+    margin: 6px 0;
+    transition: 0.4s;
+    border: 1px solid #000;
     }
 
     .profit {
         display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 76px;
+    }
+    .navbar-collapse {
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+        background: #383b53;
     }
 }
 
@@ -6652,15 +6664,16 @@ ul.mobilemenu>li {
     list-style: none;
 }
 
-label {
+.mobilelabel {
     display: inline-block;
     text-align: right;
     position: absolute;
-    right: 0;
-    top: 20px;
+    right: 13px;
+    top: 21px;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 4px;
+
 }
 
 input[type="checkbox"] {
