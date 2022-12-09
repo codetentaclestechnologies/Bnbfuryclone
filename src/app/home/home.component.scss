@@ -113,3 +113,15 @@ tr {
     border: none;
   }
 }
+
+
+.headicon{
+  margin: 5px;
+  background: linear-gradient(to right, #1060bf 51%, #24a9a7 83%, #3d628f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+li.nav-item {
+  margin: 0;
+}
