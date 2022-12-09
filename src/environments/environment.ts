@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  chainId : 80001,
+  chainId : 137,
 };
 
 /*

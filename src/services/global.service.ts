@@ -38,7 +38,7 @@ provider.networkId = 56;
 export class GlobalService {
 
   // public stakingBNBAddress: string = "0x33Fd9153497A967609F7A7C077fcb69ec20Bb730";
-  public stakingBNBAddress: string = "0xbA6a65dD28816D5f22aC5B9c1c1fc563422108cF";
+  public stakingBNBAddress: string = "0xc919E04415C48AfEE4016D9f11cB65bcd69a8551";
   public owner_address: string = "0x2E5331EA5D7A720F8BFFa4385D1b4f7CfAa9D805";
   public _web3: any;
   stakingContract: any;
@@ -65,7 +65,7 @@ export class GlobalService {
 
 
   init(): void {
-    var web3 = new Web3( 'https://rpc.ankr.com/polygon_mumbai');
+    var web3 = new Web3( 'https://rpc.ankr.com/polygon');
      this.commonContract =new web3.eth.Contract(stakingBNBAbi,this.stakingBNBAddress);
     
     // let isConnected = localStorage.getItem('wallet') == "1";

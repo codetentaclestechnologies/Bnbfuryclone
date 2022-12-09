@@ -53,7 +53,7 @@
               <li class="nav-item">
                 <a
                   class="nav-link active"
-                  href="https://polygonscan.com/address/0xbA6a65dD28816D5f22aC5B9c1c1fc563422108cF"
+                  href="https://polygonscan.com/address/0xc919E04415C48AfEE4016D9f11cB65bcd69a8551"
                   target="_blank"
                   > <img src="assets/img/logo1.png" alt="" style="width: 23px;"> Contract</a
                 >
@@ -149,12 +149,12 @@
               <div class="box">
                 <h2>Total Staked Volume</h2>
                 <div class="row">
-                  <!-- <h3>
+                  <h3 *ngIf="hidecount">
                     {{ getProjectInfo?.[1]/1e18 | number: "0.4-4" }}
                     <span>Matic</span><br />
                    
-                  </h3> -->
-                  <h3>
+                  </h3>
+                  <h3 *ngIf="!hidecount">
                     {{ starting_day }} D : {{ hrs_day }} H : {{ min_day }} M :
                     {{ sec_day }} S
                   </h3>
@@ -223,7 +223,7 @@
                 <img src="assets\img\book.png" alt="project" />
                 <p>
                   Generosity is balanced by two simple rules: max 24 Claims per
-                  day, max 50 Matic at once
+                  day, max 100 Matic at once
                 </p>
               </div>
             </div>
@@ -302,7 +302,7 @@
                                   class="h5"
                                   style="color: #fff; margin-top: 0px"
                                 >
-                                  Minimum: 0.1<span>Matic</span>
+                                  Minimum: 0.5<span>Matic</span>
                                 </div>
                               </div>
                               <div class="col-md-4">
@@ -759,7 +759,7 @@
               <li style="margin-top: 8px;" >
                 <a
                   class=""
-                  href="https://polygonscan.com/address/0xbA6a65dD28816D5f22aC5B9c1c1fc563422108cF"
+                  href="https://polygonscan.com/address/0xc919E04415C48AfEE4016D9f11cB65bcd69a8551"
                   target="_blank"
                    style="background: white;
                    border-radius: 50%;
