@@ -5507,7 +5507,7 @@ div .fb-content {
     }
 
     .main-section {
-        padding-bottom: 300px;
+        /* padding-bottom: 300px; */
     }
 
     /* .main-section:before,
@@ -5519,7 +5519,7 @@ div .fb-content {
     }
 
     .about-info {
-        margin: -300px 0 0 60px;
+        /* margin: -300px 0 0 60px; */
         float: none;
         width: auto;
     }
@@ -5873,6 +5873,12 @@ div .fb-content {
     .notice .val {
         margin-bottom: 4px;
         font-size: 16px;
+    }
+    .daily {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin:0
     }
 }
 
