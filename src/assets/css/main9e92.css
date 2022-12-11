@@ -4422,6 +4422,12 @@ div .fb-content {
         width: 100%;
         padding: 0 !important;
     }
+    .daily {
+        justify-content: center;
+        align-items: center;
+       width: 100%;
+       margin: 0;
+    }
 }
 
 .fb-content:before,
@@ -5266,7 +5272,7 @@ div .fb-content {
     }
 
     .main-content {
-        padding-right: 55%;
+        padding-right: 2%;
     }
 
     .main-content h1,
@@ -5275,9 +5281,9 @@ div .fb-content {
         margin-bottom: 10px;
     }
 
-    .about-info {
+    /* .about-info {
         width: 45%;
-    }
+    } */
 
     .about-content {
         /* padding-right: 55%; */
@@ -5531,6 +5537,12 @@ div .fb-content {
     .about-content {
         padding-right: 0;
         padding-top: 30px;
+    }
+    .daily {
+        justify-content: center;
+        align-items: center;
+       margin: 0;
+       width: 100%;
     }
 
     .company {
@@ -5880,6 +5892,7 @@ div .fb-content {
         width: 100%;
         margin:0
     }
+   
 }
 
 @media screen and (max-width: 640px) {
@@ -5987,7 +6000,7 @@ div .fb-content {
 
     .about-info {
         margin-left: 0;
-        margin-top: -325px;
+        
     }
 
     .about-info .block {
@@ -6002,9 +6015,9 @@ div .fb-content {
         text-align: center;
     }
 
-    .main-section {
+    /* .main-section {
         padding-bottom: 300px;
-    }
+    } */
 
     .daily {
         padding-top: 20px;
@@ -6538,6 +6551,7 @@ td {
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {
